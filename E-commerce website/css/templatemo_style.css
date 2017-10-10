@@ -174,6 +174,8 @@ select {
         line-height:30px;
     }
 
+
+
 .text-right {
     text-align: right;
 }
@@ -810,6 +812,18 @@ h4.consult-title {
 .ticket-item a.ticket-btn:hover {
     background: #90be2c;
 }
+
+.ticket-item select {
+            height:30px;
+            width:500px;
+            line-height:30px;
+        }
+
+.ticket-item input {
+                    height:30px;
+                    width:500px;
+                    line-height:30px;
+                }
 
 .partner-list {
     background: #eee;
