@@ -813,6 +813,7 @@ h4.consult-title {
   background: #90be2c;
 }
 
+<<<<<<< HEAD
 .ticket-item select {
   height:30px;
   width:500px;
@@ -823,6 +824,56 @@ h4.consult-title {
   height:30px;
   width:500px;
   line-height:30px;
+}
+=======
+
+
+.hotel-list {
+            margin-bottom: 70px;
+}
+
+.hotel-item {
+                    overflow: hidden;
+                    margin-bottom: 30px;
+                }
+
+.hotel-item h4 {
+                    font-size: 28px;
+                    text-transform: uppercase;
+                    margin-bottom: 25px;
+                }
+
+.hotel-item a.hotel-btn {
+                    margin-top: 25px;
+                    background: #9ed034;
+                    color: #fff;
+                    padding: 12px;
+                    display: block;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 14px;
+                }
+>>>>>>> 053fed4604b22eef38e005a38d35301792422cfe
+
+.hotel-item a.hotel-btn:hover {
+                    background: #90be2c;
+                }
+
+.hotel-item select {
+                            height:30px;
+                            width:500px;
+                            line-height:30px;
+                        }
+
+.hotel-item input {
+                                    height:30px;
+                                    width:500px;
+                                    line-height:30px;
+                                }
+.hotel-item img {
+                height:30px;
+                width:150px;
 }
 
 .partner-list {
