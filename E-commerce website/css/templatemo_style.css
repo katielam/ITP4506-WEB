@@ -813,6 +813,19 @@ h4.consult-title {
   background: #90be2c;
 }
 
+<<<<<<< HEAD
+.ticket-item select {
+  height:30px;
+  width:500px;
+  line-height:30px;
+}
+
+.ticket-item input {
+  height:30px;
+  width:500px;
+  line-height:30px;
+}
+=======
 
 
 .hotel-list {
@@ -867,6 +880,7 @@ h4.consult-title {
 }
 
 .hotel-item a.hotel-btn {
+<<<<<<< HEAD
   margin-top: 25px;
   background: #9ed034;
   color: #fff;
@@ -877,6 +891,19 @@ h4.consult-title {
   font-weight: 700;
   font-size: 14px;
 }
+=======
+                    margin-top: 25px;
+                    background: #9ed034;
+                    color: #fff;
+                    padding: 12px;
+                    display: block;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 14px;
+                }
+>>>>>>> 053fed4604b22eef38e005a38d35301792422cfe
+>>>>>>> 0e0d3dc8e3005b22a50b6070b24f708327f81d4d
 
 .hotel-item a.hotel-btn:hover {
   background: #90be2c;
@@ -1059,12 +1086,35 @@ div.contact-form input.mainBtn {
   font-size: 28px;
   text-transform: uppercase;
   margin-bottom: 25px;
+
+}
+
+.flight-item-search h3{
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  left: 40%;
 }
 
 .flight-item h4 {
   font-size: 28px;
   text-transform: uppercase;
   margin-bottom: 25px;
+<<<<<<< HEAD
+=======
+}
+
+.flight-btn {
+  margin-top: 25px;
+  background: #9ed034;
+  color: #fff;
+  padding: 12px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+>>>>>>> 0e0d3dc8e3005b22a50b6070b24f708327f81d4d
 }
 
 .flight-item a.flight-btn {
@@ -1094,3 +1144,14 @@ div.contact-form input.mainBtn {
   width:500px;
   line-height:30px;
 }
+<<<<<<< HEAD
+=======
+
+.flight-item img{
+  height: 170px;
+  width: 250px;
+
+  position:absolute;
+  left: 75%;
+}
+>>>>>>> 0e0d3dc8e3005b22a50b6070b24f708327f81d4d
