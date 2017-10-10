@@ -968,3 +968,49 @@ div.contact-form input.mainBtn {
         margin-top: 0;
     }
 }
+
+
+.flight-item {
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.flight-item-search {
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.flight-item h4 {
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.flight-item a.flight-btn {
+    margin-top: 25px;
+    background: #9ed034;
+    color: #fff;
+    padding: 12px;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.flight-item a.flight-btn:hover {
+    background: #90be2c;
+}
+
+.flight-item select {
+            height:30px;
+            width:500px;
+            line-height:30px;
+        }
+
+.flight-item input {
+                    height:30px;
+                    width:500px;
+                    line-height:30px;
+                }
