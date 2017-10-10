@@ -866,8 +866,30 @@ h4.consult-title {
   height:30px;
   width:500px;
   line-height:30px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 3px solid #9ed034;
 }
 .hotel-btn {
+  margin-top: 25px;
+  background: #9ed034;
+  color: #fff;
+  padding: 12px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.hotel-item td {
+  vertical-align: top;
+}
+
+.hotel-item button.hotel-btn {
+  width:auto;
+  height: auto;
   margin-top: 25px;
   background: #9ed034;
   color: #fff;
