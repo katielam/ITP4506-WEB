@@ -22,6 +22,15 @@ http://www.templatemo.com/tm-409-travel
         <link rel="stylesheet" href="css/templatemo_style.css">
 
         <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+<script src="jquery-1.11.1.js" type="text/javascript"></script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $("#condition").keyup(function(){
+
+              $(".hotel-item").hide().filter(":contains('" + $("#condition").val().toUpperCase() + "')").show();
+            });
+          });
+        </script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -80,7 +89,7 @@ http://www.templatemo.com/tm-409-travel
 
         <div class="go-act">
             <div class="container">
-              <div class="hotel-item">
+              <div class="hotel-item-search">
                             <center><h4><a href="#">Hotel Searching</a></h4>
                               <table >
                                 <tr>
@@ -99,9 +108,17 @@ http://www.templatemo.com/tm-409-travel
                                 <th>Rooms:</th>
                                 <td><select><option value="1">1</option><option value="2">2</option></select></td>
                               </tr>
+                                <tr>
+                                  <th>Hotel Name/Location:</th>
+                                  <td><input id="condition" /></td>
+                                </tr>
                               </table>
+
                               </center>
-                              <a href="#" class="ticket-btn">Search</a>
+                              <br>
+
+
+                              <a href="#" class="hotel-btn">Search</a>
                               </div>
             </div> <!-- /.container -->
         </div> <!-- /.go-act -->
@@ -113,17 +130,25 @@ http://www.templatemo.com/tm-409-travel
 
 
                         <div class="hotel-item">
-                          <img src="images/5star.png">
-                            <h4><a href="#">Happy hotel</a></h4>
-
-
+                          <table>
+                            <tr>
+                              <td width='85%'>
+                            <img src="images/5star.png">
+                            <h4><a href="#">HAPPY HOTEL</a></h4>
+                            <h3>HK$6000 per night</h3>
+                          </td>
+                            <td>
+                              <p><img src="images/happyhotel.jpg"></p>
+                            </td>
+                          </tr>
+                            </table>
                             <a href="#" class="hotel-btn">Book Now</a>
                         </div> <!-- /.hotel-item -->
 
 
                         <div class="hotel-item">
                             <img src="images/4star.png">
-                            <h4><a href="#">Travel Hotel</a></h4>
+                            <h4><a href="#">TRAVEL HOTEL</a></h4>
 
                             <a href="#" class="hotel-btn">Book Now</a>
                         </div> <!-- /.hotel-item -->
@@ -131,7 +156,7 @@ http://www.templatemo.com/tm-409-travel
 
                         <div class="hotel-item">
                           <img src="images/1star.png">
-                            <h4><a href="#">IVE Hotel</a></h4>
+                            <h4><a href="#">IVE HOTEL</a></h4>
 
                             <a href="#" class="hotel-btn">Book Now</a>
                         </div> <!-- /.hotel-item -->
@@ -139,35 +164,35 @@ http://www.templatemo.com/tm-409-travel
 
                         <div class="hotel-item">
                           <img src="images/5star.png">
-                            <h4><a href="#">5 Star hotel</a></h4>
+                            <h4><a href="#">5 STAR HOTEL</a></h4>
 
                             <a href="#" class="hotel-btn">Book Now</a>
                         </div> <!-- /.hotel-item -->
 
                         <div class="hotel-item">
                           <img src="images/4star.png">
-                            <h4><a href="#">4 Star hotel</a></h4>
+                            <h4><a href="#">4 STAR HOTEL </a></h4>
 
                             <a href="#" class="hotel-btn">Book Now</a>
                         </div> <!-- /.hotel-item -->
 
                         <div class="hotel-item">
                           <img src="images/3star.png">
-                            <h4><a href="#">Cherry hotel</a></h4>
+                            <h4><a href="#">CHERRY hotel</a></h4>
 
                             <a href="#" class="hotel-btn">Book Now</a>
                         </div> <!-- /.hotel-item -->
 
                         <div class="hotel-item">
                           <img src="images/2star.png">
-                            <h4><a href="#">Norman hotel</a></h4>
+                            <h4><a href="#">NORMAN HOTEL</a></h4>
 
                             <a href="#" class="hotel-btn">Book Now</a>
                         </div> <!-- /.hotel-item -->
 
                         <div class="hotel-item">
                           <img src="images/1star.png">
-                            <h4><a href="#">Mooncake hotel</a></h4>
+                            <h4><a href="#">MOONCAKE HOTEL</a></h4>
 
                             <a href="#" class="hotel-btn">Book Now</a>
                         </div> <!-- /.hotel-item -->
