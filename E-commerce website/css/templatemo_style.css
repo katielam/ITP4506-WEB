@@ -862,6 +862,8 @@ h4.consult-title {
   line-height:30px;
 }
 
+
+
 .hotel-item-search input  {
   height:30px;
   width:500px;
@@ -887,9 +889,10 @@ h4.consult-title {
   vertical-align: top;
 }
 
-.hotel-item button.hotel-btn {
-  width:auto;
-  height: auto;
+
+.hotel-item-search button {
+  width: 100%;
+  height: 100%;
   margin-top: 25px;
   background: #9ed034;
   color: #fff;

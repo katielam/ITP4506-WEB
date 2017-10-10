@@ -25,9 +25,9 @@
 <script src="jquery-1.11.1.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-  $("#search a").click(function(){
-    $("#condition").keyup(function(){
 
+    $("#condition").keyup(function(){
+$("#search").click(function(){
       $(".hotel-item").hide().filter(":contains('" + $("#condition").val().toUpperCase() + "')").show();
     });
   });
@@ -115,15 +115,13 @@ $(document).ready(function(){
           </tr>
           <tr>
             <th>Hotel Name/Location:</th>
-            <td><br><input id="condition" /></td>
+            <td><br><input tyep="text" id="condition" /></td>
           </tr>
         </table>
 
       </center>
       <br>
-
-
-      <a class="hotel-btn" id="search">Search</a>
+      <button id="search" >Search</button>
     </div>
   </div> <!-- /.container -->
 </div> <!-- /.go-act -->
@@ -140,6 +138,7 @@ $(document).ready(function(){
           <td width='85%'>
             <img src="images/5star.png">
             <h4><a href="#">HAPPY HOTEL</a></h4>
+            <h3>London,Hippodrome Casino</h3>
             <h3>HK$8888 per night</h3>
           </td>
           <td>
@@ -157,6 +156,7 @@ $(document).ready(function(){
           <td width='85%'>
             <img src="images/4star.png">
             <h4><a href="#">TRAVEL HOTEL</a></h4>
+            <h3>London,British Museum</h3>
             <h3>HK$2200 per night</h3>
           </td>
           <td>
@@ -175,6 +175,7 @@ $(document).ready(function(){
           <td width='85%'>
             <img src="images/1star.png">
             <h4><a href="#">IVE HOTEL</a></h4>
+            <h3>London,British Museum</h3>
             <h3>HK$400 per night</h3>
           </td>
           <td>
