@@ -26,9 +26,19 @@
 <script type="text/javascript">
 $(document).ready(function(){
 
-    $("#condition").keyup(function(){
-$("#search").click(function(){
-      $(".hotel-item").hide().filter(":contains('" + $("#condition").val().toUpperCase() + "')").show();
+    $("#search").click(function(){
+
+        // $(".hotel-item").hide().filter(":contains('" + $("#condition").val().toUpperCase() + "')").show();
+        $(".hotel-item").hide().filter(":contains('" + $("#selectlocation option:selected").text().toUpperCase() + "')").show();
+        $(".hotel-item").hide().filter()
+      });;
+
+        $("#condition").keyup(function(){
+          $("#search").click(function(){
+
+             $(".hotel-item").hide().filter(":contains('" + $("#condition").val().toUpperCase() + "')").show();
+
+
     });
   });
 });
@@ -102,9 +112,9 @@ $("#search").click(function(){
             </tr>
             <tr>
               <th>Location:</th>
-              <td><select>
-                <option value="lodon">Lodon</option>
-                <option value="japan">Japan</option>
+              <td><select id="selectlocation">
+                <option value="london" >London</option>
+                <option value="japan" >Japan</option>
               </select>
             </td>
             <th>  Rooms:</th>
@@ -156,7 +166,7 @@ $("#search").click(function(){
           <td width='85%'>
             <img src="images/4star.png">
             <h4><a href="#">TRAVEL HOTEL</a></h4>
-            <h3>London,British Museum</h3>
+            <h3>London,CENTRAL STATION</h3>
             <h3>HK$2200 per night</h3>
           </td>
           <td>
@@ -193,6 +203,7 @@ $("#search").click(function(){
           <td width='85%'>
             <img src="images/5star.png">
             <h4><a href="#">5 STAR HOTEL</a></h4>
+            <h3>LONDON,LONDON city</h3>
             <h3>HK$6000 per night</h3>
           </td>
           <td>
@@ -209,6 +220,7 @@ $("#search").click(function(){
           <td width='85%'>
             <img src="images/4star.png">
             <h4><a href="#">4 STAR HOTEL</a></h4>
+            <h3>LONDON,LONDON BRIDGE</h3>
             <h3>HK$4500 per night</h3>
           </td>
           <td>
@@ -226,6 +238,7 @@ $("#search").click(function(){
           <td width='85%'>
             <img src="images/3star.png">
             <h4><a href="#">CHERRY HOTEL</a></h4>
+            <h3>LONDON,HARRODS</h3>
             <h3>HK$1300 per night</h3>
           </td>
           <td>
@@ -243,6 +256,7 @@ $("#search").click(function(){
           <td width='85%'>
             <img src="images/2star.png">
             <h4><a href="#">NORMAN HOTEL</a></h4>
+            <h3>LONDON,LONDON BRIDGE</h3>
             <h3>HK$600 per night</h3>
           </td>
           <td>
@@ -259,6 +273,148 @@ $("#search").click(function(){
           <td width='85%'>
             <img src="images/1star.png">
             <h4><a href="#">MOONCAKE HOTEL</a></h4>
+            <h3>LONDON,ANGEL CENTRAL</h3>
+            <h3>HK$100 per night</h3>
+          </td>
+          <td>
+            <p><img src="images/mooncakehotel.jpg"></p>
+          </td>
+        </tr>
+      </table>
+      <a href="#" class="hotel-btn">Book Now</a>
+    </div> <!-- /.hotel-item -->
+
+
+
+<!-- japan hotel-->
+
+    <div class="hotel-item">
+      <table>
+        <tr>
+          <td width='85%'>
+            <img src="images/5star.png">
+            <h4><a href="#">JAPAN HAPPY HOTEL</a></h4>
+            <h3>JAPAN,Hippodrome Casino</h3>
+            <h3>HK$8888 per night</h3>
+          </td>
+          <td>
+            <p><img src="images/happyhotel.jpg"></p>
+          </td>
+        </tr>
+      </table>
+      <a href="#" class="hotel-btn">Book Now</a>
+    </div> <!-- /.hotel-item -->
+
+
+    <div class="hotel-item">
+      <table>
+        <tr>
+          <td width='85%'>
+            <img src="images/4star.png">
+            <h4><a href="#">JAPAN TRAVEL HOTEL</a></h4>
+            <h3>JAPAN,British Museum</h3>
+            <h3>HK$2200 per night</h3>
+          </td>
+          <td>
+            <p><img src="images/travelhotel.jpg"></p>
+          </td>
+        </tr>
+      </table>
+      <a href="#" class="hotel-btn">Book Now</a>
+    </div> <!-- /.hotel-item -->
+
+
+    <div class="hotel-item">
+
+      <table>
+        <tr>
+          <td width='85%'>
+            <img src="images/1star.png">
+            <h4><a href="#">JAPAN IVE HOTEL</a></h4>
+            <h3>JAPAN,British Museum</h3>
+            <h3>HK$400 per night</h3>
+          </td>
+          <td>
+            <p><img src="images/ivehotel.jpg"></p>
+          </td>
+        </tr>
+      </table>
+      <a href="#" class="hotel-btn">Book Now</a>
+    </div> <!-- /.hotel-item -->
+
+
+    <div class="hotel-item">
+      <table>
+        <tr>
+          <td width='85%'>
+            <img src="images/5star.png">
+            <h4><a href="#">JAPAN 5 STAR HOTEL</a></h4>
+            <h3>HK$6000 per night</h3>
+          </td>
+          <td>
+            <p><img src="images/5starhotel.jpg"></p>
+          </td>
+        </tr>
+      </table>
+      <a href="#" class="hotel-btn">Book Now</a>
+    </div> <!-- /.hotel-item -->
+
+    <div class="hotel-item">
+      <table>
+        <tr>
+          <td width='85%'>
+            <img src="images/4star.png">
+            <h4><a href="#">JAPAN 4 STAR HOTEL</a></h4>
+            <h3>HK$4500 per night</h3>
+          </td>
+          <td>
+            <p><img src="images/4starhotel.jpg"></p>
+          </td>
+        </tr>
+      </table>
+      <a href="#" class="hotel-btn">Book Now</a>
+    </div> <!-- /.hotel-item -->
+
+    <div class="hotel-item">
+
+      <table>
+        <tr>
+          <td width='85%'>
+            <img src="images/3star.png">
+            <h4><a href="#">JAPAN CHERRY HOTEL</a></h4>
+            <h3>HK$1300 per night</h3>
+          </td>
+          <td>
+            <p><img src="images/cherryhotel.jpg"></p>
+          </td>
+        </tr>
+      </table>
+      <a href="#" class="hotel-btn">Book Now</a>
+    </div> <!-- /.hotel-item -->
+
+    <div class="hotel-item">
+
+      <table>
+        <tr>
+          <td width='85%'>
+            <img src="images/2star.png">
+            <h4><a href="#">JAPAN NORMAN HOTEL</a></h4>
+            <h3>HK$600 per night</h3>
+          </td>
+          <td>
+            <p><img src="images/normanhotel.jpg"></p>
+          </td>
+        </tr>
+      </table>
+      <a href="#" class="hotel-btn">Book Now</a>
+    </div> <!-- /.hotel-item -->
+
+    <div class="hotel-item">
+      <table>
+        <tr>
+          <td width='85%'>
+            <img src="images/1star.png">
+            <h4><a href="#">JAPAN MOONCAKE HOTEL</a></h4>
             <h3>HK$100 per night</h3>
           </td>
           <td>

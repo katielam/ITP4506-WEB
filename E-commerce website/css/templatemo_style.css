@@ -813,7 +813,6 @@ h4.consult-title {
   background: #90be2c;
 }
 
-<<<<<<< HEAD
 .ticket-item select {
   height:30px;
   width:500px;
@@ -825,7 +824,7 @@ h4.consult-title {
   width:500px;
   line-height:30px;
 }
-=======
+
 
 
 .hotel-list {
@@ -850,6 +849,25 @@ h4.consult-title {
   margin-bottom: 25px;
 }
 .hotel-item h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+
+
+.hotel-item-japan {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+
+.hotel-item-japan h4 {
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.hotel-item-japan h3 {
   font-size: 16px;
   text-transform: uppercase;
   margin-bottom: 25px;
@@ -888,7 +906,50 @@ h4.consult-title {
 .hotel-item td {
   vertical-align: top;
 }
+.hotel-item-japan td {
+  vertical-align: top;
+}
 
+.hotel-item-japan a.hotel-btn {
+
+  margin-top: 25px;
+  background: #9ed034;
+  color: #fff;
+  padding: 12px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+
+
+.hotel-item-japan a.hotel-btn:hover {
+  background: #90be2c;
+}
+
+.hotel-item-japan select {
+  height:30px;
+  width:500px;
+  line-height:30px;
+}
+
+.hotel-item-japan input {
+  height:30px;
+  width:500px;
+  line-height:30px;
+}
+.hotel-item-japan img {
+  height:30px;
+  width:150px;
+}
+
+.hotel-item-japan p img {
+  height:200px;
+  width:200px;
+
+}
 
 .hotel-item-search button {
   width: 100%;
@@ -905,7 +966,7 @@ h4.consult-title {
 }
 
 .hotel-item a.hotel-btn {
-<<<<<<< HEAD
+
   margin-top: 25px;
   background: #9ed034;
   color: #fff;
@@ -916,19 +977,8 @@ h4.consult-title {
   font-weight: 700;
   font-size: 14px;
 }
-=======
-                    margin-top: 25px;
-                    background: #9ed034;
-                    color: #fff;
-                    padding: 12px;
-                    display: block;
-                    text-align: center;
-                    text-transform: uppercase;
-                    font-weight: 700;
-                    font-size: 14px;
-                }
->>>>>>> 053fed4604b22eef38e005a38d35301792422cfe
->>>>>>> 0e0d3dc8e3005b22a50b6070b24f708327f81d4d
+
+
 
 .hotel-item a.hotel-btn:hover {
   background: #90be2c;
@@ -1125,8 +1175,21 @@ div.contact-form input.mainBtn {
   font-size: 28px;
   text-transform: uppercase;
   margin-bottom: 25px;
-<<<<<<< HEAD
-=======
+
+}
+
+.flight-item-search h4 {
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+
+}
+
+.flight-item-search h4 {
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+
 }
 
 .flight-btn {
@@ -1139,10 +1202,24 @@ div.contact-form input.mainBtn {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
->>>>>>> 0e0d3dc8e3005b22a50b6070b24f708327f81d4d
+
 }
 
 .flight-item a.flight-btn {
+  margin-top: 25px;
+  background: #9ed034;
+  color: #fff;
+  padding: 12px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.flight-item-search button {
+  width: 100%;
+  height: 100%;
   margin-top: 25px;
   background: #9ed034;
   color: #fff;
@@ -1169,8 +1246,7 @@ div.contact-form input.mainBtn {
   width:500px;
   line-height:30px;
 }
-<<<<<<< HEAD
-=======
+
 
 .flight-item img{
   height: 170px;
@@ -1179,4 +1255,3 @@ div.contact-form input.mainBtn {
   position:absolute;
   left: 75%;
 }
->>>>>>> 0e0d3dc8e3005b22a50b6070b24f708327f81d4d
