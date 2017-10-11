@@ -26,18 +26,13 @@
 <script type="text/javascript">
 $(document).ready(function(){
 
-    $("#search").click(function(){
-
-        // $(".hotel-item").hide().filter(":contains('" + $("#condition").val().toUpperCase() + "')").show();
-        $(".hotel-item").hide().filter(":contains('" + $("#selectlocation option:selected").text().toUpperCase() + "')").show();
-        $(".hotel-item").hide().filter()
-      });;
 
         $("#condition").keyup(function(){
+
           $("#search").click(function(){
 
-             $(".hotel-item").hide().filter(":contains('" + $("#condition").val().toUpperCase() + "')").show();
 
+                 $(".hotel-item").hide().filter(":contains('" + $("#selectlocation").val().toUpperCase() + " "+$("#condition").val().toUpperCase()+ "')").show();
 
     });
   });
@@ -45,9 +40,7 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-  <!--[if lt IE 7]>
-  <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-  <![endif]-->
+
 
   <div class="site-header">
     <div class="container">
@@ -147,7 +140,7 @@ $(document).ready(function(){
         <tr>
           <td width='85%'>
             <img src="images/5star.png">
-            <h4><a href="#">HAPPY HOTEL</a></h4>
+            <h4><a href="#">LONDON HAPPY HOTEL</a></h4>
             <h3>London,Hippodrome Casino</h3>
             <h3>HK$8888 per night</h3>
           </td>
@@ -165,7 +158,7 @@ $(document).ready(function(){
         <tr>
           <td width='85%'>
             <img src="images/4star.png">
-            <h4><a href="#">TRAVEL HOTEL</a></h4>
+            <h4><a href="#">LONDON TRAVEL HOTEL</a></h4>
             <h3>London,CENTRAL STATION</h3>
             <h3>HK$2200 per night</h3>
           </td>
@@ -184,7 +177,7 @@ $(document).ready(function(){
         <tr>
           <td width='85%'>
             <img src="images/1star.png">
-            <h4><a href="#">IVE HOTEL</a></h4>
+            <h4><a href="#">LONDON IVE HOTEL</a></h4>
             <h3>London,British Museum</h3>
             <h3>HK$400 per night</h3>
           </td>
@@ -202,7 +195,7 @@ $(document).ready(function(){
         <tr>
           <td width='85%'>
             <img src="images/5star.png">
-            <h4><a href="#">5 STAR HOTEL</a></h4>
+            <h4><a href="#">LONDON 5 STAR HOTEL</a></h4>
             <h3>LONDON,LONDON city</h3>
             <h3>HK$6000 per night</h3>
           </td>
@@ -219,7 +212,7 @@ $(document).ready(function(){
         <tr>
           <td width='85%'>
             <img src="images/4star.png">
-            <h4><a href="#">4 STAR HOTEL</a></h4>
+            <h4><a href="#">LONDON 4 STAR HOTEL</a></h4>
             <h3>LONDON,LONDON BRIDGE</h3>
             <h3>HK$4500 per night</h3>
           </td>
@@ -237,7 +230,7 @@ $(document).ready(function(){
         <tr>
           <td width='85%'>
             <img src="images/3star.png">
-            <h4><a href="#">CHERRY HOTEL</a></h4>
+            <h4><a href="#">LONDON CHERRY HOTEL</a></h4>
             <h3>LONDON,HARRODS</h3>
             <h3>HK$1300 per night</h3>
           </td>
@@ -255,7 +248,7 @@ $(document).ready(function(){
         <tr>
           <td width='85%'>
             <img src="images/2star.png">
-            <h4><a href="#">NORMAN HOTEL</a></h4>
+            <h4><a href="#">LONDON NORMAN HOTEL</a></h4>
             <h3>LONDON,LONDON BRIDGE</h3>
             <h3>HK$600 per night</h3>
           </td>
@@ -272,7 +265,7 @@ $(document).ready(function(){
         <tr>
           <td width='85%'>
             <img src="images/1star.png">
-            <h4><a href="#">MOONCAKE HOTEL</a></h4>
+            <h4><a href="#">LONDON MOONCAKE HOTEL</a></h4>
             <h3>LONDON,ANGEL CENTRAL</h3>
             <h3>HK$100 per night</h3>
           </td>
@@ -306,7 +299,7 @@ $(document).ready(function(){
     </div> <!-- /.hotel-item -->
 
 
-    <div class="hotel-item">
+  <div class="hotel-item">
       <table>
         <tr>
           <td width='85%'>
@@ -375,7 +368,7 @@ $(document).ready(function(){
       <a href="#" class="hotel-btn">Book Now</a>
     </div> <!-- /.hotel-item -->
 
-    <div class="hotel-item">
+  <div class="hotel-item">
 
       <table>
         <tr>
