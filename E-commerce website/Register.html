@@ -1,3 +1,8 @@
+<?php
+// Start the session
+session_start();
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -19,6 +24,16 @@
         <link rel="stylesheet" href="css/templatemo_style.css">
 
         <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+        <script src="jquery-1.11.1.js" type="text/javascript"></script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $("#login_btn").click(function(){
+
+              $("#testt").text("LOGOUT");
+              alert("Welcome " + $("#loginname").val());
+            });
+          });
+        </script>
     </head>
     <body>
 
@@ -40,8 +55,12 @@
                                   <li><a href="index.html">Home</a></li>
                                   <li><a href="Hotel.html">Hotel</a></li>
                                   <li><a href="Flight.html">Flight</a></li>
+<<<<<<< HEAD
+                                  <li class="active"><a id="testt" href="Register.html">Register/Login</a></li>
+=======
                                   <li class="active"><a href="Register.html">Register/Login</a></li>
                                   <li><a href="shoppingcart.html"><img src="shoppingcart.png"></a></li>
+>>>>>>> 87ee78a63b365bffe1d7e244c80181ed4bf92122
                                 </ul>
                                 <a href="#" class="toggle-menu visible-sm visible-xs">
                                     <i class="fa fa-bars"></i>
@@ -108,6 +127,16 @@
                         <div class="col-md-4"><!-- second column -->
                             <div class="widget-item">
                                 <h3 class="widget-title">LOGIN</h3>
+<<<<<<< HEAD
+
+                                <h4 class="consult-title">Login Name:</h4><input type="text" id="loginname" name="loginname" />
+                                <h4 class="consult-title">Login Password:</h4><input type="password" id="loginpwd" name="loginpwd" /><br>
+                                <button type="submit" id="login_btn">Login</button>
+
+
+
+
+=======
                                 <div class="Rform">
                                 <h4 class="consult-title">Login Name:</h4><input type="text" name="loginname" />
                                 <h4 class="consult-title">Login Password:</h4><input type="password" name="loginpwd" /><br>
@@ -115,6 +144,7 @@
                                 <div class="formbtn">
                                 <input type="submit" value="submit">
                               </div>
+>>>>>>> 87ee78a63b365bffe1d7e244c80181ed4bf92122
                             </div> <!-- /.widget-item -->
                         </div> <!-- /.col-md-4 -->
 
