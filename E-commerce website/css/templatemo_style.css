@@ -1037,8 +1037,11 @@ div.contact-form input.mainBtn {
   font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 25px;
-  left: 40%;
+  left: 27%;
+  position: relative;
 }
+
+
 
 .flight-item h4 {
   font-size: 28px;
