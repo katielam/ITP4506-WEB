@@ -1286,3 +1286,8 @@ div.contact-form input.mainBtn {
   font-weight: 700;
   font-size: 14px;
 }
+.cart img {
+    width: 30px;
+    margin-top: 30px;
+
+}
