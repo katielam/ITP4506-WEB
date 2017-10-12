@@ -2,7 +2,13 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<?php
+$cookie_name = "user";
+$cookie_value = "John Doe";
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+?>
+<html class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <title>Contact - Travel</title>
@@ -25,6 +31,7 @@
 
   });
   </script>
+
 </head>
 <body>
 
@@ -77,155 +84,161 @@
   <div class="contact-page">
     <div class="container">
       <div class="row">
-
-
-
-        <form name="registerform" id="registerform" action="#" method="post">
-          <div class="payform">
-
-            <h3 class="widget-title">Pay Now</h3>
-            <br>
-            <div class="col-md-8 col-sm-6 col-xs-2">
+        <form name="paymentform" id="paymentform" method="post">
+          <h3 class="widget-title">Pay Now</h3>
+          <br>
+          <div class="col-md-8 ">
             <div class="payment">
+              <?php
+              $_SESSION["fname"] = "Tai Man";
+                echo "Favorite color is " . $_SESSION["fname"] . '.<br>';
 
-                <h3>Personal information:<h3>
+              ?>
+              <h3>Personal information:<h3>
 
-                  <div class="formbtn">
-                    <button>Add your personal information</button>
-                  </div>
-              <p>First Name: <br/><input name="Fname" type="text" id="Fname" ></p>
-                <p>Email Address:<br/><input name="email" type="text" id="email"></p>
-                  <p>passport Number:<br/><input name="passport" type="text" id="passport"></p>
-                  <p>Last Name: <br/><input name="Lname" type="text" id="Lname" ></p>
-                  <p>Phone Number:<br/><input name="email" type="text" id="phone" ></p>
-
-                  </div>
-              </div>
-              <div class="col-md-4">
-              <div class="payment">
-
-                  <h2>Booking information:<h2>
-                <p>First Name: <br/><input name="Fname" type="text" id="Fname" ></p>
-                  <p>Email Address:<br/><input name="email" type="text" id="email"></p>
-                    <p>passport Number:<br/><input name="passport" type="text" id="passport"></p>
-                    <p>Last Name: <br/><input name="Lname" type="text" id="Lname" ></p>
-                    <p>Phone Number:<br/><input name="email" type="text" id="phone" ></p>
-
-                    </div>
+                <div class="formbtn">
+                  <button>Add your personal information</button>
                 </div>
+                <p>First Name: <br/><input name="Fname" type="text" id="Fname" required></p>
+                <p>Email Address:<br/><input name="email" type="text" id="email" required></p>
+                <p>passport Number:<br/><input name="passport" type="text" id="passport" required></p>
+                <p>Last Name: <br/><input name="Lname" type="text" id="Lname" required></p>
+                <p>Phone Number:<br/><input name="email" type="text" id="phone" required></p>
 
-            </div>
+
+              </div>
+              </div>
+            <div class="col-md-4">
+
+                <h2>Payment information:<h2>
+                  <br>
+                  <table >
+                    <tr>
+
+                      <td><input  type="radio"  name="paytype" value="visa" required></td><td><img src="images/visa.png" width="80px" height="40px"></td>
+                      <td><input  type="radio"  name="paytype" value="master" required></td><td><img src="images/master.png" width="80px" height="40px"></td>
+                      <td><input  type="radio" name="paytype" value="ae" required> </td><td><img src="images/ae.png" width="80px" height="40px"></td>
+                      <td><input  type="radio"  value="up" required></td><td><img src="images/up.png" width="80px" height="40px"></td>
+                    </tr>
+                  </table>
+                  <br>
+                  <div class="payment">
+                  <p>Holder's Name: <br/><input name="hname" type="text" id="hname" required></p>
+                  <p>Valid Date:<br/><input name="vdate" type="text" id="vdate" required></p>
+                  <p>Card Number:<br/><input name="cnum" type="text" id="cnum" required></p>
+                  <p>CVV: <br/><input name="cvv" type="text" id="cvv" required></p>
+
+                  </div>
+                </div>
+              </div>
+
             <div class="formbtn">
 
               <p><button>Pay Now</button></p>
             </div>
-            </form>
 
-
-            <!-- /.register-form -->
-
-
-          </div>
+          </form>
         </div>
       </div>
 
 
 
 
-      <div class="partner-list">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-2 col-sm-4 col-xs-6">
-              <div class="partner-item">
-                <img src="images/partners/partner1.png" alt="">
-              </div> <!-- /.partner-item -->
-            </div> <!-- /.col-md-2 -->
-            <div class="col-md-2 col-sm-4 col-xs-6">
-              <div class="partner-item">
-                <img src="images/partners/partner2.png" alt="">
-              </div> <!-- /.partner-item -->
-            </div> <!-- /.col-md-2 -->
-            <div class="col-md-2 col-sm-4 col-xs-6">
-              <div class="partner-item">
-                <img src="images/partners/partner3.png" alt="">
-              </div> <!-- /.partner-item -->
-            </div> <!-- /.col-md-2 -->
-            <div class="col-md-2 col-sm-4 col-xs-6">
-              <div class="partner-item">
-                <img src="images/partners/partner1.png" alt="">
-              </div> <!-- /.partner-item -->
-            </div> <!-- /.col-md-2 -->
-            <div class="col-md-2 col-sm-4 col-xs-6">
-              <div class="partner-item">
-                <img src="images/partners/partner2.png" alt="">
-              </div> <!-- /.partner-item -->
-            </div> <!-- /.col-md-2 -->
-            <div class="col-md-2 col-sm-4 col-xs-6">
-              <div class="partner-item last">
-                <img src="images/partners/partner3.png" alt="">
-              </div> <!-- /.partner-item -->
-            </div> <!-- /.col-md-2 -->
-          </div> <!-- /.row -->
-        </div> <!-- /.container -->
-      </div> <!-- /.partner-list -->
+
+    <div class="partner-list">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="partner-item">
+              <img src="images/partners/partner1.png" alt="">
+            </div> <!-- /.partner-item -->
+          </div> <!-- /.col-md-2 -->
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="partner-item">
+              <img src="images/partners/partner2.png" alt="">
+            </div> <!-- /.partner-item -->
+          </div> <!-- /.col-md-2 -->
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="partner-item">
+              <img src="images/partners/partner3.png" alt="">
+            </div> <!-- /.partner-item -->
+          </div> <!-- /.col-md-2 -->
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="partner-item">
+              <img src="images/partners/partner1.png" alt="">
+            </div> <!-- /.partner-item -->
+          </div> <!-- /.col-md-2 -->
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="partner-item">
+              <img src="images/partners/partner2.png" alt="">
+            </div> <!-- /.partner-item -->
+          </div> <!-- /.col-md-2 -->
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="partner-item last">
+              <img src="images/partners/partner3.png" alt="">
+            </div> <!-- /.partner-item -->
+          </div> <!-- /.col-md-2 -->
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </div> <!-- /.partner-list -->
 
 
 
-      <div class="site-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 col-sm-4">
-              <div class="footer-logo">
-                <a href="index.html">
-                  <img src="images/logo.png" alt="">
-                </a>
-              </div>
-            </div> <!-- /.col-md-4 -->
-            <div class="col-md-4 col-sm-4">
-              <div class="copyright">
-                <span>Copyright &copy; 2017 <a href="#">HAPPY TRAVEL LTD.</a></span>
-              </div>
-            </div> <!-- /.col-md-4 -->
-            <div class="col-md-4 col-sm-4">
-              <ul class="social-icons">
-                <li><a href="#" class="fa fa-facebook"></a></li>
-                <li><a href="#" class="fa fa-twitter"></a></li>
-                <li><a href="#" class="fa fa-linkedin"></a></li>
-                <li><a href="#" class="fa fa-flickr"></a></li>
-                <li><a href="#" class="fa fa-rss"></a></li>
-              </ul>
-            </div> <!-- /.col-md-4 -->
-          </div> <!-- /.row -->
-        </div> <!-- /.container -->
-      </div> <!-- /.site-footer -->
+    <div class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4">
+            <div class="footer-logo">
+              <a href="index.html">
+                <img src="images/logo.png" alt="">
+              </a>
+            </div>
+          </div> <!-- /.col-md-4 -->
+          <div class="col-md-4 col-sm-4">
+            <div class="copyright">
+              <span>Copyright &copy; 2017 <a href="#">HAPPY TRAVEL LTD.</a></span>
+            </div>
+          </div> <!-- /.col-md-4 -->
+          <div class="col-md-4 col-sm-4">
+            <ul class="social-icons">
+              <li><a href="#" class="fa fa-facebook"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="#" class="fa fa-linkedin"></a></li>
+              <li><a href="#" class="fa fa-flickr"></a></li>
+              <li><a href="#" class="fa fa-rss"></a></li>
+            </ul>
+          </div> <!-- /.col-md-4 -->
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </div> <!-- /.site-footer -->
 
-      <script src="js/vendor/jquery-1.11.0.min.js"></script>
-      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-      <script src="js/bootstrap.js"></script>
-      <script src="js/plugins.js"></script>
-      <script src="js/main.js"></script>
+    <script src="js/vendor/jquery-1.11.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 
-      <!-- Google Map -->
-      <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-      <script src="js/vendor/jquery.gmap3.min.js"></script>
+    <!-- Google Map -->
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="js/vendor/jquery.gmap3.min.js"></script>
 
-      <!-- Google Map Init-->
-      <script type="text/javascript">
-      jQuery(function($){
-        $('.first-map, .map-holder').gmap3({
-          marker:{
-            address: '16.8496189,96.1288854'
-          },
-          map:{
-            options:{
-              zoom: 16,
-              scrollwheel: false,
-              streetViewControl : true
-            }
+    <!-- Google Map Init-->
+    <script type="text/javascript">
+    jQuery(function($){
+      $('.first-map, .map-holder').gmap3({
+        marker:{
+          address: '16.8496189,96.1288854'
+        },
+        map:{
+          options:{
+            zoom: 16,
+            scrollwheel: false,
+            streetViewControl : true
           }
-        });
+        }
       });
-      </script>
-      <!-- templatemo 409 travel -->
-    </body>
-    </html>
+    });
+    </script>
+    <!-- templatemo 409 travel -->
+  </body>
+  </html>
