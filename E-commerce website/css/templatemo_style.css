@@ -1314,7 +1314,10 @@ div.contact-form input.mainBtn {
 
 .showSuccess h2{
   position: absolute;
-  left: 70%;
+  visibility: visible;
+  left: 80%;
+  top: 50%;
+  color: #9ed0d4;
 }
 
 /* The Modal (background) */

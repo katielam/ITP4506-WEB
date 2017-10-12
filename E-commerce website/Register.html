@@ -1,7 +1,4 @@
-<?php
-// Start the session
-session_start();
-?>
+
 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -15,6 +12,8 @@ session_start();
 
   <meta name="viewport" content="width=device-width">
   <meta name="author" content="templatemo">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -33,8 +32,27 @@ session_start();
 
     });
 
+
+
+      // $("#submit_btn").click(function(){
+      //   var RFname = document.getElementById("RFname").value;
+      //   // var RLname = document.getElementById("RLname").value;
+      //   // var Rname = document.getElementById("Rname").value;
+      //   // var pwd = document.getElementById("Rpwd").value;
+      //   // var Rschool = document.getElementById("Rschool").value;
+      //   // var Remail = document.getElementById("Remail").value;
+      //
+      //   document.getElementById('hiddensubmit').click();
+      // });
+
+      $("#submit_btn").click(function(){
+        $("#hiddensubmit").trigger('click');
+      });
+
+
   });
   </script>
+
 </head>
 <body>
 
@@ -93,29 +111,61 @@ session_start();
 
           <h3 class="widget-title">Register a member</h3>
 
-          <form name="registerform" id="registerform" action="#" method="post">
+          <form name="registerform" id="registerform"  method="post">
             <div class="Rform">
               <p>
-                First Name:<br/><input name="Fname" type="text" id="Fname" required="required">
+                First Name:<br/><input name="Fname" type="text" id="RFname">
               </p>
               <p>
-                Last Name:<br/><input name="Lname" type="text" id="Lname" required="required">
+                Last Name:<br/><input name="Lname" type="text" id="RLname">
               </p>
               <p>
-                Login Name:<br/><input name="name" type="text" id="name" required="required">
+                Login Name:<br/><input name="name" type="text" id="Rname">
               </p>
               <p>
-                Login password:<br/><input name="pwd" type="password" id="pwd" required="required">
+                Login password:<br/><input name="pwd" type="password" id="Rpwd">
               </p>
               <p>
-                Email Address:<br/><input name="email" type="text" id="email" required="required">
+                Email Address:<br/><input name="email" type="text" id="Remail">
               </p>
-              School:<br/><input name="school" type="text" id="school" required="required">
+              <p>
+              School:<br/><input name="school" type="text" id="Rschool">
             </p>
           </div>
-          <div class="formbtn">
-            <button type="submit" id="submit">Submit Form</button>
-          </div>
+
+
+
+
+              <!-- Trigger the modal with a button -->
+              <div class="formbtn">
+              <button type="submit" id="submit_btn">Register</button>
+              <input type="button" id="hiddensubmit" data-toggle="modal" data-target="#myModal"/>
+            </div>
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Register Success</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button"  data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+
+
+
         </form>
 
       </div>
@@ -141,9 +191,6 @@ session_start();
   </div>
 </div>
 
-<div class="showSuccess">
-  <h2>hisdkfjwfwinfiwhfwiowhviwen</h2>
-</div>
 
 <div class="partner-list">
   <div class="container">
