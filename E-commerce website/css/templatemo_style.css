@@ -1350,3 +1350,11 @@ div.contact-form input.mainBtn {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
+
+.popupimg img{
+  width: 594px;
+  height: 174px;
+  margin:  300px;
+  position: absolute;
+
+}

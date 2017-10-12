@@ -6,14 +6,20 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
+
+
+
+
+
   <meta charset="utf-8">
   <title>Contact - Travel</title>
   <meta name="description" content="">
 
   <meta name="viewport" content="width=device-width">
   <meta name="author" content="templatemo">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -34,24 +40,28 @@
 
 
 
-      // $("#submit_btn").click(function(){
-      //   var RFname = document.getElementById("RFname").value;
-      //   // var RLname = document.getElementById("RLname").value;
-      //   // var Rname = document.getElementById("Rname").value;
-      //   // var pwd = document.getElementById("Rpwd").value;
-      //   // var Rschool = document.getElementById("Rschool").value;
-      //   // var Remail = document.getElementById("Remail").value;
-      //
-      //   document.getElementById('hiddensubmit').click();
-      // });
-
-      $("#submit_btn").click(function(){
-        $("#hiddensubmit").trigger('click');
-      });
-
 
   });
+  function checkRegister(){
+    var Fname = document.getElementById("RFname").value;
+    var Lname = document.getElementById("RLname").value;
+    var name = document.getElementById("Rname").value;
+    var email = document.getElementById("Remail").value;
+    var school = document.getElementById("Rschool").value;
+    var pwd = document.getElementById("Rpwd").value;
+    if(Fname.length>5 && Lname.length>5 && name.length>5 && email.length>5 && school.length>5 && pwd.length>5){
+      $("#myBtn").trigger('click');
+    }else{
+      $("#myBtn2").trigger('click');
+    }
+  }
+
+
+  function clickabutton(){
+        modal.style.display = "none";
+  }
   </script>
+
 
 </head>
 <body>
@@ -111,170 +121,148 @@
 
           <h3 class="widget-title">Register a member</h3>
 
-          <form name="registerform" id="registerform"  method="post">
+          <form>
             <div class="Rform">
               <p>
-                First Name:<br/><input name="Fname" type="text" id="RFname">
+                First Name:<br/><input name="Fname" type="text" id="RFname" title="Please enter more than 6 letter" pattern=".{6,}">
               </p>
               <p>
-                Last Name:<br/><input name="Lname" type="text" id="RLname">
+                Last Name:<br/><input name="Lname" type="text" id="RLname" title="Please enter more than 6 letter" pattern=".{6,}">
               </p>
               <p>
-                Login Name:<br/><input name="name" type="text" id="Rname">
+                Login Name:<br/><input name="name" type="text" id="Rname" title="Please enter more than 6 letter" pattern=".{6,}">
               </p>
               <p>
-                Login password:<br/><input name="pwd" type="password" id="Rpwd">
+                Login password:<br/><input name="pwd" type="password" id="Rpwd" title="Please enter more than 6 letter" pattern=".{6,}">
               </p>
               <p>
-                Email Address:<br/><input name="email" type="text" id="Remail">
+                Email Address:<br/><input name="email" type="text" id="Remail" title="Please enter more than 6 letter" pattern=".{6,}">
               </p>
               <p>
-              School:<br/><input name="school" type="text" id="Rschool">
-            </p>
-          </div>
-
-
-
-
-              <!-- Trigger the modal with a button -->
-              <div class="formbtn">
-              <button type="submit" id="submit_btn">Register</button>
-              <input type="button" id="hiddensubmit" data-toggle="modal" data-target="#myModal"/>
+                School:<br/><input name="school" type="text" id="Rschool" title="Please enter more than 6 letter" pattern=".{6,}">
+              </p>
             </div>
-              <!-- Modal -->
-              <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-
-                  <!-- Modal content-->
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h4 class="modal-title"></h4>
-                    </div>
-                    <div class="modal-body">
-                      <p>Register Success</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button"  data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
 
 
 
-
-
-        </form>
-
-      </div>
-      <!-- /.register-form -->
-      <div class="col-md-4">
-
-      </div>
-      <div class="col-md-4"><!-- second column -->
-        <div class="widget-item">
-          <h3 class="widget-title">LOGIN</h3>
-          <div class="Rform">
-            <h4 class="consult-title">Login Name:</h4><input type="text" id="loginname" name="loginname" />
-            <h4 class="consult-title">Login Password:</h4><input type="password" name="loginpwd" /><br>
-          </div>
+          </form>
           <div class="formbtn">
-            <button type="submit" id="login_btn">Login</button>
+            <button onclick="checkRegister()">Register</button>
+
           </div>
 
-        </div> <!-- /.widget-item -->
-      </div> <!-- /.col-md-4 -->
 
+
+        </div>
+        <!-- /.register-form -->
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4"><!-- second column -->
+          <div class="widget-item">
+            <h3 class="widget-title">LOGIN</h3>
+            <div class="Rform">
+              <h4 class="consult-title">Login Name:</h4><input type="text" id="loginname" name="loginname" />
+              <h4 class="consult-title">Login Password:</h4><input type="password" name="loginpwd" /><br>
+            </div>
+            <div class="formbtn">
+              <button type="submit" id="login_btn">Login</button>
+            </div>
+
+          </div> <!-- /.widget-item -->
+        </div> <!-- /.col-md-4 -->
+
+      </div>
     </div>
   </div>
-</div>
 
 
-<div class="partner-list">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2 col-sm-4 col-xs-6">
-        <div class="partner-item">
-          <img src="images/partners/partner1.png" alt="">
-        </div> <!-- /.partner-item -->
-      </div> <!-- /.col-md-2 -->
-      <div class="col-md-2 col-sm-4 col-xs-6">
-        <div class="partner-item">
-          <img src="images/partners/partner2.png" alt="">
-        </div> <!-- /.partner-item -->
-      </div> <!-- /.col-md-2 -->
-      <div class="col-md-2 col-sm-4 col-xs-6">
-        <div class="partner-item">
-          <img src="images/partners/partner3.png" alt="">
-        </div> <!-- /.partner-item -->
-      </div> <!-- /.col-md-2 -->
-      <div class="col-md-2 col-sm-4 col-xs-6">
-        <div class="partner-item">
-          <img src="images/partners/partner1.png" alt="">
-        </div> <!-- /.partner-item -->
-      </div> <!-- /.col-md-2 -->
-      <div class="col-md-2 col-sm-4 col-xs-6">
-        <div class="partner-item">
-          <img src="images/partners/partner2.png" alt="">
-        </div> <!-- /.partner-item -->
-      </div> <!-- /.col-md-2 -->
-      <div class="col-md-2 col-sm-4 col-xs-6">
-        <div class="partner-item last">
-          <img src="images/partners/partner3.png" alt="">
-        </div> <!-- /.partner-item -->
-      </div> <!-- /.col-md-2 -->
-    </div> <!-- /.row -->
-  </div> <!-- /.container -->
-</div> <!-- /.partner-list -->
+  <div class="partner-list">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <div class="partner-item">
+            <img src="images/partners/partner1.png" alt="">
+          </div> <!-- /.partner-item -->
+        </div> <!-- /.col-md-2 -->
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <div class="partner-item">
+            <img src="images/partners/partner2.png" alt="">
+          </div> <!-- /.partner-item -->
+        </div> <!-- /.col-md-2 -->
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <div class="partner-item">
+            <img src="images/partners/partner3.png" alt="">
+          </div> <!-- /.partner-item -->
+        </div> <!-- /.col-md-2 -->
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <div class="partner-item">
+            <img src="images/partners/partner1.png" alt="">
+          </div> <!-- /.partner-item -->
+        </div> <!-- /.col-md-2 -->
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <div class="partner-item">
+            <img src="images/partners/partner2.png" alt="">
+          </div> <!-- /.partner-item -->
+        </div> <!-- /.col-md-2 -->
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <div class="partner-item last">
+            <img src="images/partners/partner3.png" alt="">
+          </div> <!-- /.partner-item -->
+        </div> <!-- /.col-md-2 -->
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.partner-list -->
 
 
 
-<div class="site-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-sm-4">
-        <div class="footer-logo">
-          <a href="index.html">
-            <img src="images/logo.png" alt="">
-          </a>
-        </div>
-      </div> <!-- /.col-md-4 -->
-      <div class="col-md-4 col-sm-4">
-        <div class="copyright">
-          <span>Copyright &copy; 2017 <a href="#">HAPPY TRAVEL LTD.</a></span>
-        </div>
-      </div> <!-- /.col-md-4 -->
-      <div class="col-md-4 col-sm-4">
-        <ul class="social-icons">
-          <li><a href="#" class="fa fa-facebook"></a></li>
-          <li><a href="#" class="fa fa-twitter"></a></li>
-          <li><a href="#" class="fa fa-linkedin"></a></li>
-          <li><a href="#" class="fa fa-flickr"></a></li>
-          <li><a href="#" class="fa fa-rss"></a></li>
-        </ul>
-      </div> <!-- /.col-md-4 -->
-    </div> <!-- /.row -->
-  </div> <!-- /.container -->
-</div> <!-- /.site-footer -->
+  <div class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-4">
+          <div class="footer-logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="">
+            </a>
+          </div>
+        </div> <!-- /.col-md-4 -->
+        <div class="col-md-4 col-sm-4">
+          <div class="copyright">
+            <span>Copyright &copy; 2017 <a href="#">HAPPY TRAVEL LTD.</a></span>
+          </div>
+        </div> <!-- /.col-md-4 -->
+        <div class="col-md-4 col-sm-4">
+          <ul class="social-icons">
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-linkedin"></a></li>
+            <li><a href="#" class="fa fa-flickr"></a></li>
+            <li><a href="#" class="fa fa-rss"></a></li>
+          </ul>
+        </div> <!-- /.col-md-4 -->
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.site-footer -->
 
-<script src="js/vendor/jquery-1.11.0.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-<script src="js/bootstrap.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
 
-<!-- Google Map -->
-<!-- <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-<script src="js/vendor/jquery.gmap3.min.js"></script> -->
 
-<!-- Google Map Init-->
-<!-- <script type="text/javascript">
-jQuery(function($){
-$('.first-map, .map-holder').gmap3({
-marker:{
-address: '16.8496189,96.1288854'
+
+  <script src="js/vendor/jquery-1.11.0.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Map -->
+  <!-- <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <script src="js/vendor/jquery.gmap3.min.js"></script> -->
+
+  <!-- Google Map Init-->
+  <!-- <script type="text/javascript">
+  jQuery(function($){
+  $('.first-map, .map-holder').gmap3({
+  marker:{
+  address: '16.8496189,96.1288854'
 },
 map:{
 options:{
@@ -287,5 +275,59 @@ streetViewControl : true
 });
 </script> -->
 <!-- templatemo 409 travel -->
+
+
+<!-- Trigger/Open The Modal -->
+<button hidden="hidden" id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Welcome!!!</h2>
+    </div>
+    <div class="modal-body">
+
+      <p>Register Success!!</p>
+    </div>
+    <div class="modal-footer">
+      <h3><button onclick="clickabutton()">Close</button></h3>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
 </body>
 </html>
