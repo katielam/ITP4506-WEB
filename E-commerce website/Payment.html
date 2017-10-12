@@ -52,7 +52,7 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Hotel.html">Hotel</a></li>
                 <li><a href="Flight.html">Flight</a></li>
-                <li><a href="Logout.html">Logout</a></li>
+                <li><a href="Register.html">Register/Login</a></li>
                 <li><a href="shoppingcart.html"><div class="cart"><img src="images/shoppingcart.png"></div></a></li>
               </ul>
               <a href="#" class="toggle-menu visible-sm visible-xs">
@@ -86,14 +86,13 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
       <div class="row">
         <form name="paymentform" id="paymentform" method="post">
           <h3 class="widget-title">Pay Now</h3>
+<div class="formbtn">
+          <h3 >Login to get a discount!</h3><button>Login</button>
+        </div>
           <br>
           <div class="col-md-8 ">
             <div class="payment">
-              <?php
-              $_SESSION["fname"] = "Tai Man";
-                echo "Favorite color is " . $_SESSION["fname"] . '.<br>';
 
-              ?>
               <h3>Personal information:<h3>
 
                 <div class="formbtn">
