@@ -30,7 +30,9 @@ session_start();
     $("#login_btn").click(function(){
       $("#changeToLogout").text("LOGOUT");
       alert("Welcome " + $("#loginname").val());
+
     });
+
   });
   </script>
 </head>
@@ -94,21 +96,21 @@ session_start();
           <form name="registerform" id="registerform" action="#" method="post">
             <div class="Rform">
               <p>
-                First Name:<br/><input name="Fname" type="text" id="Fname" >
+                First Name:<br/><input name="Fname" type="text" id="Fname" required="required">
               </p>
               <p>
-                Last Name:<br/><input name="Lname" type="text" id="Lname" >
+                Last Name:<br/><input name="Lname" type="text" id="Lname" required="required">
               </p>
               <p>
-                Login Name:<br/><input name="name" type="text" id="name" >
+                Login Name:<br/><input name="name" type="text" id="name" required="required">
               </p>
               <p>
-                Login password:<br/><input name="pwd" type="password" id="pwd" >
+                Login password:<br/><input name="pwd" type="password" id="pwd" required="required">
               </p>
               <p>
-                Email Address:<br/><input name="email" type="text" id="email" >
+                Email Address:<br/><input name="email" type="text" id="email" required="required">
               </p>
-              School:<br/><input name="school" type="text" id="school">
+              School:<br/><input name="school" type="text" id="school" required="required">
             </p>
           </div>
           <div class="formbtn">
@@ -119,6 +121,7 @@ session_start();
       </div>
       <!-- /.register-form -->
       <div class="col-md-4">
+
       </div>
       <div class="col-md-4"><!-- second column -->
         <div class="widget-item">
@@ -138,8 +141,9 @@ session_start();
   </div>
 </div>
 
-
-
+<div class="showSuccess">
+  <h2>hisdkfjwfwinfiwhfwiowhviwen</h2>
+</div>
 
 <div class="partner-list">
   <div class="container">
