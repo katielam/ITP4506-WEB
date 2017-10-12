@@ -1291,3 +1291,8 @@ div.contact-form input.mainBtn {
     margin-top: 30px;
     margin-bottom:40px;
 }
+
+.showSuccess h2{
+  position: absolute;
+  left: 70%;
+}
