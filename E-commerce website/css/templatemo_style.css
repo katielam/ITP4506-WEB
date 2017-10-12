@@ -1006,6 +1006,12 @@ h4.consult-title {
 
 }
 
+.hotel-item img.location{
+  height:35px;
+  width:35px;
+
+}
+
 
 .partner-list {
   background: #eee;
@@ -1273,7 +1279,31 @@ div.contact-form input.mainBtn {
   border-bottom: 3px solid #9ed034;
 }
 
+.payform input {
+  height:100%;
+  width:30%;
+  line-height:30px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 3px solid #9ed034;
+}
+
 .formbtn button {
+  width: 100%;
+  height: 100%;
+  margin-top: 25px;
+  background: #9ed034;
+  color: #fff;
+  padding: 12px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.formbtn input {
   width: 100%;
   height: 100%;
   margin-top: 25px;
@@ -1290,4 +1320,20 @@ div.contact-form input.mainBtn {
     width: 30px;
     margin-top: 30px;
     margin-bottom:40px;
+}
+
+.loca{
+  width: auto;
+  height: auto;
+}
+
+fieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px groove (internal value);
 }
