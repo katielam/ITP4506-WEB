@@ -81,51 +81,51 @@ Template: 409 travel
 
 .owl-fade-out {
     z-index: 10;
-    -webkit-animation: fadeOut .20s both ease;
-    -moz-animation: fadeOut .20s both ease;
-    animation: fadeOut .20s both ease;
+    -webkit-animation: fadeOut .120s both ease;
+    -moz-animation: fadeOut .120s both ease;
+    animation: fadeOut .120s both ease;
 }
 
 .owl-fade-in {
-    -webkit-animation: fadeIn .20s both ease;
-    -moz-animation: fadeIn .20s both ease;
-    animation: fadeIn .20s both ease;
+    -webkit-animation: fadeIn .120s both ease;
+    -moz-animation: fadeIn .120s both ease;
+    animation: fadeIn .120s both ease;
 }
 
 .owl-backSlide-out {
-    -webkit-animation: backSlideOut 1s both ease;
-    -moz-animation: backSlideOut 1s both ease;
-    animation: backSlideOut 1s both ease;
+    -webkit-animation: backSlideOut 120s both ease;
+    -moz-animation: backSlideOut 120s both ease;
+    animation: backSlideOut 120s both ease;
 }
 
 .owl-backSlide-in {
-    -webkit-animation: backSlideIn 1s both ease;
-    -moz-animation: backSlideIn 1s both ease;
-    animation: backSlideIn 1s both ease;
+    -webkit-animation: backSlideIn 120s both ease;
+    -moz-animation: backSlideIn 120s both ease;
+    animation: backSlideIn 120s both ease;
 }
 
 .owl-goDown-out {
-    -webkit-animation: scaleToFade .7s ease both;
-    -moz-animation: scaleToFade .7s ease both;
-    animation: scaleToFade .7s ease both;
+    -webkit-animation: scaleToFade .120s ease both;
+    -moz-animation: scaleToFade .120s ease both;
+    animation: scaleToFade .120s ease both;
 }
 
 .owl-goDown-in {
-    -webkit-animation: goDown .6s ease both;
-    -moz-animation: goDown .6s ease both;
-    animation: goDown .6s ease both;
+    -webkit-animation: goDown .120s ease both;
+    -moz-animation: goDown .120s ease both;
+    animation: goDown .120s ease both;
 }
 
 .owl-fadeUp-in {
-    -webkit-animation: scaleUpFrom .5s ease both;
-    -moz-animation: scaleUpFrom .5s ease both;
-    animation: scaleUpFrom .5s ease both;
+    -webkit-animation: scaleUpFrom .120s ease both;
+    -moz-animation: scaleUpFrom .120s ease both;
+    animation: scaleUpFrom .120s ease both;
 }
 
 .owl-fadeUp-out {
-    -webkit-animation: scaleUpTo .5s ease both;
-    -moz-animation: scaleUpTo .5s ease both;
-    animation: scaleUpTo .5s ease both;
+    -webkit-animation: scaleUpTo .120s ease both;
+    -moz-animation: scaleUpTo .120s ease both;
+    animation: scaleUpTo .120s ease both;
 }
 
 @-webkit-keyframes empty {
