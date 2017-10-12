@@ -1260,7 +1260,7 @@ div.contact-form input.mainBtn {
 }
 
 
-.payment input {
+.payment td p input[type="text"]{
   height:100%;
   width:100%;
   line-height:30px;
@@ -1270,7 +1270,7 @@ div.contact-form input.mainBtn {
   border-bottom: 3px solid #9ed034;
 }
 
-.payment  td input {
+/*.payment  td input [type="text"]{
   height:100%;
   width:100%;
   line-height:30px;
@@ -1278,7 +1278,7 @@ div.contact-form input.mainBtn {
   outline: 0;
   background: transparent;
   border-bottom: 3px solid #9ed034;
-}
+}*/
 
 .Rform input {
   height:100%;

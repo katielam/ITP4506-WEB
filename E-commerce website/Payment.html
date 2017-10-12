@@ -3,11 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<?php
-$cookie_name = "user";
-$cookie_value = "John Doe";
-setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-?>
+
 <html class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
@@ -27,299 +23,289 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
   <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
   <script src="jquery-1.11.1.js" type="text/javascript"></script>
   <script type="text/javascript">
-  $(document).ready(function(){
-    //
-    // $("#payment_btn").click(function(){
-    //
-    //   alert("Pay successful!");
-    //
-    // });
-
-
-
-
-  });
   function checkPayment(){
     var Fname = document.getElementById("Fname").value;
     var Lname = document.getElementById("Lname").value;
-    var passort = document.getElementById("passort").value;
+    var passport = document.getElementById("passport").value;
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
     var hname = document.getElementById("hname").value;
     var vdate = document.getElementById("vdate").value;
     var cvv = document.getElementById("cvv").value;
     var cnum = document.getElementById("cnum").value;
-    if(Fname.length>5 && Lname.length>5 && passort.length>5 && email.length>5 && phone.length>7 && phone.length<9&& hname.length>5
-&& vdate.length>3&& cvv.length>2&& cnum.length>15){
-      $("#myBtn").trigger('click');
-    }else{
-      $("#myBtn2").trigger('click');
+    if(Fname.length>5 && Lname.length>5 && passport.length>5 && email.length>5 && phone.length>7&& hname.length>5
+      && vdate.length>3&& cvv.length>2&& cnum.length>15){
+        $("#myBtn").trigger('click');
+      }else{
+        $("#myBtn2").trigger('click');
+      }
     }
-  }
 
 
-  function clickabutton(){
-        modal.style.display = "none";
-  }
-  </script>
+    function clickabutton(){
+      modal.style.display = "none";
+    }
+    </script>
 
-</head>
-<body>
+  </head>
+  <body>
 
-  <div class="site-header">
-    <div class="container">
-      <div class="main-header">
+    <div class="site-header">
+      <div class="container">
+        <div class="main-header">
+          <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-10">
+              <div class="logo">
+                <a href="#">
+                  <img src="images/logo.png" alt="travel html5 template" title="travel html5 template">
+                </a>
+              </div> <!-- /.logo -->
+            </div> <!-- /.col-md-4 -->
+            <div class="col-md-8 col-sm-6 col-xs-2">
+              <div class="main-menu">
+                <ul class="visible-lg visible-md">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="Hotel.html">Hotel</a></li>
+                  <li><a href="Flight.html">Flight</a></li>
+                  <li><a href="Register.html">Register/Login</a></li>
+                  <li><a href="shoppingcart.html"><div class="cart"><img src="images/shoppingcart.png"></div></a></li>
+                </ul>
+                <a href="#" class="toggle-menu visible-sm visible-xs">
+                  <i class="fa fa-bars"></i>
+                </a>
+              </div> <!-- /.main-menu -->
+            </div> <!-- /.col-md-8 -->
+          </div> <!-- /.row -->
+        </div> <!-- /.main-header -->
         <div class="row">
-          <div class="col-md-4 col-sm-6 col-xs-10">
-            <div class="logo">
-              <a href="#">
-                <img src="images/logo.png" alt="travel html5 template" title="travel html5 template">
-              </a>
-            </div> <!-- /.logo -->
-          </div> <!-- /.col-md-4 -->
-          <div class="col-md-8 col-sm-6 col-xs-2">
-            <div class="main-menu">
-              <ul class="visible-lg visible-md">
+          <div class="col-md-12 visible-sm visible-xs">
+            <div class="menu-responsive">
+              <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="Hotel.html">Hotel</a></li>
-                <li><a href="Flight.html">Flight</a></li>
-                <li><a href="Register.html">Register/Login</a></li>
-                <li><a href="shoppingcart.html"><div class="cart"><img src="images/shoppingcart.png"></div></a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="active"><a href="contact.html">Contact</a></li>
               </ul>
-              <a href="#" class="toggle-menu visible-sm visible-xs">
-                <i class="fa fa-bars"></i>
-              </a>
-            </div> <!-- /.main-menu -->
-          </div> <!-- /.col-md-8 -->
+            </div> <!-- /.menu-responsive -->
+          </div> <!-- /.col-md-12 -->
         </div> <!-- /.row -->
-      </div> <!-- /.main-header -->
-      <div class="row">
-        <div class="col-md-12 visible-sm visible-xs">
-          <div class="menu-responsive">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="events.html">Events</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li class="active"><a href="contact.html">Contact</a></li>
-            </ul>
-          </div> <!-- /.menu-responsive -->
-        </div> <!-- /.col-md-12 -->
-      </div> <!-- /.row -->
-    </div> <!-- /.container -->
-  </div> <!-- /.site-header -->
+      </div> <!-- /.container -->
+    </div> <!-- /.site-header -->
 
-  <div class="page-top" id="templatemo_contact">
-  </div> <!-- /.page-header -->
+    <div class="page-top" id="templatemo_contact">
+    </div> <!-- /.page-header -->
 
-  <div class="contact-page">
-    <div class="container">
-      <div class="row">
-        <form name="paymentform" id="paymentform" method="post">
-          <h3 class="widget-title">Pay Now</h3>
-          <div class="formbtn">
-          <h3 >Login to get a discount!</h3><button>Login</button>
-        </div>
-          <br>
+    <div class="contact-page">
+      <div class="container">
+        <div class="row">
           <div class="col-md-8 ">
+            <h3 class="widget-title">Pay Now</h3>
+
+            <div class="formbtn">
+              <b>Login to get a discount!</b><button onclick="window.location.href='Register.html'" >Login</button>
+            </div>
+            <br>
+            <button>Add your personal information</button>
             <div class="payment">
+              <form>
+                <table width="100%">
+                  <tr>
 
-              <h3>Personal information:<h3>
+                    <td><h3><b>Personal information:</b><h3>
+                      <p>First Name: <br/><input name="Fname" type="text" id="Fname" title="Please enter more than 6 letter" pattern=".{6,}"></p>
+                      <p>Last Name: <br/><input name="Lname" type="text" id="Lname" title="Please enter more than 6 letter" pattern=".{6,}"></p>
+                      <p>Email Address:<br/><input name="email" type="text" id="email" title="Please enter more than 6 letter" pattern=".{6,}"></p>
+                      <p>passport Number:<br/><input name="passport" type="text" id="passport" title="Please enter more than 6 letter" pattern=".{6,}"></p>
+                      <p>Phone Number:<br/><input name="phone" type="text" id="phone" title="Please enter 8 letter" pattern=".{8,}"></p>
+                    </td>
+                    <!-- <div class="col-md-4"> -->
+                    <td>.....</td>
+                    <td>
+                      <h2><b>Payment information:</b><h2>
 
-                <div class="formbtn">
-                  <button>Add your personal information</button>
-                </div>
-                <p>First Name: <br/><input name="Fname" type="text" id="Fname" title="Please enter more than 6 letter" pattern=".{6,}"></p>
-                <p>Last Name: <br/><input name="Lname" type="text" id="Lname" title="Please enter more than 6 letter" pattern=".{6,}"></p>
-                <p>Email Address:<br/><input name="email" type="text" id="email" title="Please enter more than 6 letter" pattern=".{6,}"></p>
-                <p>passport Number:<br/><input name="passport" type="text" id="passport" title="Please enter more than 6 letter" pattern=".{6,}"></p>
-                <p>Phone Number:<br/><input name="phone" type="text" id="phone" title="Please enter 8 letter" pattern=".{8,}"></p>
+
+                              <p>Holder's Name: <br/><input name="hname" type="text" id="hname" title="Please enter more than 6 letter" pattern=".{6,}"></p>
+                              <p>Valid Date:<br/><input name="vdate" type="text" id="vdate" title="Please enter  4 letter" pattern=".{4,}"></p>
+                              <p>Card Number:<br/><input name="cnum" type="text" id="cnum" title="Please enter 16 letter" pattern=".{16,}"></p>
+                              <p>CVV: <br/><input name="cvv" type="text" id="cvv" title="Please enter 3 letter" pattern=".{3,}"></p>
+
+                            </td>
 
 
-              </div>
-              </div>
-            <div class="col-md-4">
+                          </tr>
 
-                <h2>Payment information:<h2>
-                  <br>
-                  <table >
-                    <tr>
+                        </table>
 
-                      <td><input  type="radio"  name="paytype" value="visa" required></td><td><img src="images/visa.png" width="80px" height="40px"></td>
-                      <td><input  type="radio"  name="paytype" value="master" required></td><td><img src="images/master.png" width="80px" height="40px"></td>
-                      <td><input  type="radio" name="paytype" value="ae" required> </td><td><img src="images/ae.png" width="80px" height="40px"></td>
-                      <td><input  type="radio"  value="up" required></td><td><img src="images/up.png" width="80px" height="40px"></td>
-                    </tr>
-                  </table>
-                  <br>
-                  <div class="payment">
-                  <p>Holder's Name: <br/><input name="hname" type="text" id="hname" title="Please enter more than 6 letter" pattern=".{6,}"></p>
-                  <p>Valid Date:<br/><input name="vdate" type="text" id="vdate" title="Please enter  4 letter" pattern=".{4,}"></p>
-                  <p>Card Number:<br/><input name="cnum" type="text" id="cnum" title="Please enter 16 letter" pattern=".{16,}"></p>
-                  <p>CVV: <br/><input name="cvv" type="text" id="cvv" title="Please enter 3 letter" pattern=".{3,}"></p>
+                          <table>
+                            <tr>
 
+                            <td ><input  type="radio"  name="paytype" value="visa" required></td><td><img src="images/visa.png" width="80px" height="40px"></td>
+                              <td > <input  type="radio"  name="paytype" value="master"  required></td><td><img src="images/master.png" width="80px" height="40px"></td>
+                                <td ><input  type="radio" name="paytype"  value="ae" required></td><td><img src="images/ae.png" width="80px" height="40px"></td>
+                                <td >  <input  type="radio" name="paytype"  value="up"  required></td><td><img src="images/up.png" width="80px" height="40px"></td>
+                          </tr>
+                          </table>
+
+                      </form>
+                    </div>
+                    <div class="formbtn">
+                      <button onclick="checkPayment()">Pay Now</button>
+                    </div>
                   </div>
                 </div>
               </div>
-
-            <div class="formbtn">
-
-              <p><button type="submit" id="payment_btn" onclick="checkPayment()">Pay Now</button></p>
             </div>
 
-          </form>
-        </div>
-      </div>
 
 
 
 
-
-    <div class="partner-list">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-2 col-sm-4 col-xs-6">
-            <div class="partner-item">
-              <img src="images/partners/partner1.png" alt="">
-            </div> <!-- /.partner-item -->
-          </div> <!-- /.col-md-2 -->
-          <div class="col-md-2 col-sm-4 col-xs-6">
-            <div class="partner-item">
-              <img src="images/partners/partner2.png" alt="">
-            </div> <!-- /.partner-item -->
-          </div> <!-- /.col-md-2 -->
-          <div class="col-md-2 col-sm-4 col-xs-6">
-            <div class="partner-item">
-              <img src="images/partners/partner3.png" alt="">
-            </div> <!-- /.partner-item -->
-          </div> <!-- /.col-md-2 -->
-          <div class="col-md-2 col-sm-4 col-xs-6">
-            <div class="partner-item">
-              <img src="images/partners/partner1.png" alt="">
-            </div> <!-- /.partner-item -->
-          </div> <!-- /.col-md-2 -->
-          <div class="col-md-2 col-sm-4 col-xs-6">
-            <div class="partner-item">
-              <img src="images/partners/partner2.png" alt="">
-            </div> <!-- /.partner-item -->
-          </div> <!-- /.col-md-2 -->
-          <div class="col-md-2 col-sm-4 col-xs-6">
-            <div class="partner-item last">
-              <img src="images/partners/partner3.png" alt="">
-            </div> <!-- /.partner-item -->
-          </div> <!-- /.col-md-2 -->
-        </div> <!-- /.row -->
-      </div> <!-- /.container -->
-    </div> <!-- /.partner-list -->
-
+            <div class="partner-list">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="partner-item">
+                      <img src="images/partners/partner1.png" alt="">
+                    </div> <!-- /.partner-item -->
+                  </div> <!-- /.col-md-2 -->
+                  <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="partner-item">
+                      <img src="images/partners/partner2.png" alt="">
+                    </div> <!-- /.partner-item -->
+                  </div> <!-- /.col-md-2 -->
+                  <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="partner-item">
+                      <img src="images/partners/partner3.png" alt="">
+                    </div> <!-- /.partner-item -->
+                  </div> <!-- /.col-md-2 -->
+                  <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="partner-item">
+                      <img src="images/partners/partner1.png" alt="">
+                    </div> <!-- /.partner-item -->
+                  </div> <!-- /.col-md-2 -->
+                  <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="partner-item">
+                      <img src="images/partners/partner2.png" alt="">
+                    </div> <!-- /.partner-item -->
+                  </div> <!-- /.col-md-2 -->
+                  <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="partner-item last">
+                      <img src="images/partners/partner3.png" alt="">
+                    </div> <!-- /.partner-item -->
+                  </div> <!-- /.col-md-2 -->
+                </div> <!-- /.row -->
+              </div> <!-- /.container -->
+            </div> <!-- /.partner-list -->
 
 
-    <div class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 col-sm-4">
-            <div class="footer-logo">
-              <a href="index.html">
-                <img src="images/logo.png" alt="">
-              </a>
-            </div>
-          </div> <!-- /.col-md-4 -->
-          <div class="col-md-4 col-sm-4">
-            <div class="copyright">
-              <span>Copyright &copy; 2017 <a href="#">HAPPY TRAVEL LTD.</a></span>
-            </div>
-          </div> <!-- /.col-md-4 -->
-          <div class="col-md-4 col-sm-4">
-            <ul class="social-icons">
-              <li><a href="#" class="fa fa-facebook"></a></li>
-              <li><a href="#" class="fa fa-twitter"></a></li>
-              <li><a href="#" class="fa fa-linkedin"></a></li>
-              <li><a href="#" class="fa fa-flickr"></a></li>
-              <li><a href="#" class="fa fa-rss"></a></li>
-            </ul>
-          </div> <!-- /.col-md-4 -->
-        </div> <!-- /.row -->
-      </div> <!-- /.container -->
-    </div> <!-- /.site-footer -->
 
-    <script src="js/vendor/jquery-1.11.0.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+            <div class="site-footer">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4 col-sm-4">
+                    <div class="footer-logo">
+                      <a href="index.html">
+                        <img src="images/logo.png" alt="">
+                      </a>
+                    </div>
+                  </div> <!-- /.col-md-4 -->
+                  <div class="col-md-4 col-sm-4">
+                    <div class="copyright">
+                      <span>Copyright &copy; 2017 <a href="#">HAPPY TRAVEL LTD.</a></span>
+                    </div>
+                  </div> <!-- /.col-md-4 -->
+                  <div class="col-md-4 col-sm-4">
+                    <ul class="social-icons">
+                      <li><a href="#" class="fa fa-facebook"></a></li>
+                      <li><a href="#" class="fa fa-twitter"></a></li>
+                      <li><a href="#" class="fa fa-linkedin"></a></li>
+                      <li><a href="#" class="fa fa-flickr"></a></li>
+                      <li><a href="#" class="fa fa-rss"></a></li>
+                    </ul>
+                  </div> <!-- /.col-md-4 -->
+                </div> <!-- /.row -->
+              </div> <!-- /.container -->
+            </div> <!-- /.site-footer -->
 
-    <!-- Google Map -->
-    <!-- <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="js/vendor/jquery.gmap3.min.js"></script> -->
+            <script src="js/vendor/jquery-1.11.0.min.js"></script>
+            <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+            <script src="js/bootstrap.js"></script>
+            <script src="js/plugins.js"></script>
+            <script src="js/main.js"></script>
 
-    <!-- Google Map Init-->
-    <!-- <script type="text/javascript">
-    jQuery(function($){
-      $('.first-map, .map-holder').gmap3({
-        marker:{
-          address: '16.8496189,96.1288854'
-        },
-        map:{
+            <!-- Google Map -->
+            <!-- <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+            <script src="js/vendor/jquery.gmap3.min.js"></script> -->
+
+            <!-- Google Map Init-->
+            <!-- <script type="text/javascript">
+            jQuery(function($){
+            $('.first-map, .map-holder').gmap3({
+            marker:{
+            address: '16.8496189,96.1288854'
+          },
+          map:{
           options:{
-            zoom: 16,
-            scrollwheel: false,
-            streetViewControl : true
-          }
+          zoom: 16,
+          scrollwheel: false,
+          streetViewControl : true
         }
-      });
+      }
     });
-    </script> -->
-    <!-- templatemo 409 travel -->
+  });
+</script> -->
+<!-- templatemo 409 travel -->
 
-    <!-- Trigger/Open The Modal -->
-    <button hidden="hidden" id="myBtn">Open Modal</button>
+<!-- Trigger/Open The Modal -->
+<button hidden="hidden" id="myBtn">Open Modal</button>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
-      <!-- Modal content -->
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="close">&times;</span>
-          <h2></h2>
-        </div>
-        <div class="modal-body">
-
-          <p>Pay Successful!</p>
-        </div>
-        <div class="modal-footer">
-          <h3><button onclick="clickabutton()">Close</button></h3>
-        </div>
-      </div>
-
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2></h2>
     </div>
+    <div class="modal-body">
 
-    <script>
-    // Get the modal
-    var modal = document.getElementById('myModal');
+      <p>Pay Successful!</p>
+    </div>
+    <div class="modal-footer">
+      <h3><a href="index.html"><button onclick="clickabutton()"><a href="index.html">Close</button></a></h3>
+    </div>
+  </div>
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
+</div>
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
 
-    // When the user clicks the button, open the modal
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-    </script>
-  </body>
-  </html>
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
