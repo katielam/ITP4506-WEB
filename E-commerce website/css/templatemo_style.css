@@ -1259,8 +1259,15 @@ div.contact-form input.mainBtn {
   left: 75%;
 }
 
-.payment form{
-  left: 55%;
+
+.payment input {
+  height:100%;
+  width:100%;
+  line-height:30px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 3px solid #9ed034;
 }
 
 .Rform input {
@@ -1272,6 +1279,8 @@ div.contact-form input.mainBtn {
   background: transparent;
   border-bottom: 3px solid #9ed034;
 }
+
+
 
 .formbtn button {
   width: 100%;
@@ -1286,6 +1295,7 @@ div.contact-form input.mainBtn {
   font-weight: 700;
   font-size: 14px;
 }
+
 .cart img {
     width: 30px;
     margin-top: 30px;
@@ -1298,4 +1308,45 @@ div.contact-form input.mainBtn {
   left: 80%;
   top: 50%;
   color: #9ed0d4;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
 }
