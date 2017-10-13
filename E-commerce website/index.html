@@ -25,7 +25,18 @@
 <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
 <script src="jquery-1.11.1.js" type="text/javascript"></script>
 <script type="text/javascript">
+$(document).ready(function(){
+  if (getCookie("username")!=""){
+    $("#changeToLogout").text("LOGOUT");
+  }
+  if($("#changeToLogout").text()=="LOGOUT"){
+    $("#changeToLogout").click(function(){
+      setCookie("username","",30);
+    });
+  }
 
+
+});
 
 </script>
 <script>
@@ -102,7 +113,7 @@ function checkCookie() {
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="Hotel.html">Hotel</a></li>
                 <li><a href="Flight.html">Flight</a></li>
-                <li><a href="Register.html">Register/Login</a></li>
+                <li><a href="Register.html" id="changeToLogout">Register/Login</a></li>
                 <li><a href="shoppingcart.html"><div class="cart"><img src="images/shoppingcart.png"><div></a></li>
 
               </ul>
