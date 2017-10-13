@@ -28,6 +28,9 @@
 $(document).ready(function(){
   if (getCookie("username")!=""){
     $("#changeToLogout").text("LOGOUT");
+
+  }else{
+    $("#profile").hide();
   }
   if($("#changeToLogout").text()=="LOGOUT"){
     $("#changeToLogout").click(function(){
@@ -115,6 +118,7 @@ function checkCookie() {
                 <li><a href="Flight.html">Flight</a></li>
                 <li><a href="Register.html" id="changeToLogout">Register/Login</a></li>
                 <li><a href="shoppingcart.html"><div class="cart"><img src="images/shoppingcart.png"><div></a></li>
+                <li id="profile"><a href="Profile.html">Profile</a></li>
 
               </ul>
               <a href="#" class="toggle-menu visible-sm visible-xs">
@@ -132,6 +136,7 @@ function checkCookie() {
               <li><a href="Hotel.html">Hotel</a></li>
               <li><a href="Flight.html">Flight</a></li>
               <li><a href="Register.html">Register/Login</a></li>
+
             </ul>
           </div> <!-- /.menu-responsive -->
         </div> <!-- /.col-md-12 -->

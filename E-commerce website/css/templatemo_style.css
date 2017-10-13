@@ -632,9 +632,13 @@ h4.consult-title {
   font-size: 18px;
   color: #9ed034;
   font-weight: 300;
-  margin: 20px 0 20px 0;
+  
 }
 
+h3.consult-title {
+  font-size: 14px;
+  color: #9ed034;
+}
 .post-small {
   overflow: hidden;
   margin-bottom: 30px;

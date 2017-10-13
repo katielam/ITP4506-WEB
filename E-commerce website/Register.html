@@ -32,11 +32,34 @@
   <script src="jquery-1.11.1.js" type="text/javascript"></script>
   <script type="text/javascript">
   $(document).ready(function(){
+
+    $("#clickRegister").click(function(){
+      var Fname = document.getElementById("RFname").value;
+      var Lname = document.getElementById("RLname").value;
+      var name = document.getElementById("Rname").value;
+      var email = document.getElementById("Remail").value;
+      var school = document.getElementById("Rschool").value;
+      var pwd = document.getElementById("Rpwd").value;
+
+      setCookie("Fname",Fname,30);
+      setCookie("Lname",Lname,30);
+      setCookie("name",name,30);
+      setCookie("email",email,30);
+      setCookie("school",school,30);
+      setCookie("pwd",pwd,30);
+
+
+    });
     if (getCookie("username") != ""){
       $("#changeToLogout").text("LOGOUT");
 
+
     }else{
-    
+<<<<<<< HEAD
+
+=======
+      $("#profile").hide();
+>>>>>>> 0e64db36365fd8203aa51e11998e8975d7429102
     }
     if($("#changeToLogout").text()=="LOGOUT"){
       $("#changeToLogout").click(function(){
@@ -137,7 +160,7 @@
                 <li><a href="Flight.html">Flight</a></li>
                 <li class="active"><a id="changeToLogout" href="Register.html">Register/Login</a></li>
                 <li><a href="shoppingcart.html"><div class="cart"><img src="images/shoppingcart.png"></div></a></li>
-
+                <li id="profile"><a href="Profile.html">Profile</a></li>
               </ul>
               <a href="#" class="toggle-menu visible-sm visible-xs">
                 <i class="fa fa-bars"></i>
@@ -175,22 +198,22 @@
           <form>
             <div class="Rform">
               <p>
-                First Name:<br/><input name="Fname" type="text" id="RFname" title="Please enter more than 6 letter" pattern=".{6,}">
+                <h3 class="consult-title">First Name:</h3><br/><input name="Fname" type="text" id="RFname" title="Please enter more than 6 letter" pattern=".{6,}">
               </p>
               <p>
-                Last Name:<br/><input name="Lname" type="text" id="RLname" title="Please enter more than 6 letter" pattern=".{6,}">
+                <h3 class="consult-title">Last Name:</h3><br/><input name="Lname" type="text" id="RLname" title="Please enter more than 6 letter" pattern=".{6,}">
               </p>
               <p>
-                Login Name:<br/><input name="name" type="text" id="Rname" title="Please enter more than 6 letter" pattern=".{6,}">
+                <h3 class="consult-title">Login Name:</h3><br/><input name="name" type="text" id="Rname" title="Please enter more than 6 letter" pattern=".{6,}">
               </p>
               <p>
-                Login password:<br/><input name="pwd" type="password" id="Rpwd" title="Please enter more than 6 letter" pattern=".{6,}">
+                <h3 class="consult-title">Login password:</h3><br/><input name="pwd" type="password" id="Rpwd" title="Please enter more than 6 letter" pattern=".{6,}">
               </p>
               <p>
-                Email Address:<br/><input name="email" type="text" id="Remail" title="Please enter more than 6 letter" pattern=".{6,}">
+                <h3 class="consult-title">Email Address:</h3><br/><input name="email" type="text" id="Remail" title="Please enter more than 6 letter" pattern=".{6,}">
               </p>
               <p>
-                School:<br/><input name="school" type="text" id="Rschool" title="Please enter more than 6 letter" pattern=".{6,}">
+                <h3 class="consult-title">School:</h3><br/><input name="school" type="text" id="Rschool" title="Please enter more than 6 letter" pattern=".{6,}">
               </p>
             </div>
 
@@ -198,7 +221,7 @@
 
           </form>
           <div class="formbtn">
-            <button onclick="checkRegister()">Register</button>
+            <button id="clickRegister" onclick="checkRegister()">Register</button>
 
           </div>
 

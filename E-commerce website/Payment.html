@@ -30,9 +30,7 @@
     $("#changeToLogout").text("LOGOUT");
 
   }
-  if(getCookie("ticket")!=""){
-    $("#checkTicket").text("You want to buy "+getCookie("ticket"));
-  }
+
 
   if($("#changeToLogout").text()=="LOGOUT"){
     $("#checkifLogged").text("You have logged! You will get a 10% discount!");
@@ -124,6 +122,7 @@
                   <li><a href="Flight.html">Flight</a></li>
                   <li><a id="changeToLogout" href="Register.html">Register/Login</a></li>
                   <li><a href="shoppingcart.html"><div class="cart"><img src="images/shoppingcart.png"></div></a></li>
+                  <li><a href="Profile.html">Profile</a></li>
                 </ul>
                 <a href="#" class="toggle-menu visible-sm visible-xs">
                   <i class="fa fa-bars"></i>
