@@ -128,6 +128,9 @@
 
               if (getCookie("username")!=""){
                 $("#changeToLogout").text("LOGOUT");
+
+              }else {
+                $("#profile").hide();
               }
               if($("#changeToLogout").text()=="LOGOUT"){
                 $("#changeToLogout").click(function(){
@@ -140,7 +143,7 @@
                   });
               });
             });
-        
+
 
           function setCookie(cname,cvalue,exdays) {
               var d = new Date();
@@ -203,6 +206,7 @@
                                     <li class="active"><a href="Flight.html">Flight</a></li>
                                     <li><a href="Register.html" id="changeToLogout">Register/Login</a></li>
                                     <li><a href="shoppingcart.html"><div class="cart"><img src="images/shoppingcart.png"></div></a></li>
+                                    <li id="profile"><a href="Profile.html">Profile</a></li>
                                   </ul>
                                   <a href="#" class="toggle-menu visible-sm visible-xs">
                                       <i class="fa fa-bars"></i>

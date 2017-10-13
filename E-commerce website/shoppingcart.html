@@ -30,7 +30,7 @@
           if(i!=8){
             str += "["+getCookie("ticket"+i)+"] , ";
           }else{
-            str += "["+getCookie("ticket"+i)+"] .";
+            str += "["+getCookie("ticket"+i)+"]";
           }
         }
 
@@ -41,20 +41,28 @@
           if(i!=16){
             str += "["+getCookie("hotel"+i)+"] , ";
           }else{
-            str += "["+getCookie("hotel"+i)+"] .";
+            str += "["+getCookie("hotel"+i)+"]";
           }
         }
 
       }
-      $("#shoppingcart").text("You want to buy "+str);
+      if(str==""){
+        $("#shoppingcart").text("You have not choice any item!");
+      }else{
+        $("#shoppingcart").text("You want to buy "+str+".");
+      }
 
-    
+
     if (getCookie("username")){
       $("#changeToLogout").text("LOGOUT");
+
+    }else{
+      $("#profile").hide();
     }
     if($("#changeToLogout").text()=="LOGOUT"){
       $("#changeToLogout").click(function(){
         setCookie("username","",30);
+
       });
     }
 
@@ -120,7 +128,8 @@
                 <li><a href="Register.html" id="changeToLogout">Register/Login</a></li>
 
                 <li class="active"><a href="shoppingcart.html"><div class="cart"><img  src="images/shoppingcartwhite.png"></div></a></li>
-              </ul>
+              <li id="profile"><a href="Profile.html">Profile</a></li>
+            </ul>
               <a href="#" class="toggle-menu visible-sm visible-xs">
                 <i class="fa fa-bars"></i>
               </a>
