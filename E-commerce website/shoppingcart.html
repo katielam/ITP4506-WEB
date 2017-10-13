@@ -22,9 +22,9 @@
   <script src="jquery-1.11.1.js" type="text/javascript"></script>
   <script type="text/javascript">
   $(document).ready(function(){
-    if(getCookie("ticket")!=""){
+
       var str = "";
-      for(i=1;i<=8;i++){
+      for(var i=1;i<=8;i++){
 
         if(i<=8 && getCookie("ticket"+i)!=""){
           if(i!=8){
@@ -35,7 +35,7 @@
         }
 
       }
-      for(i=1;i<=16;i++){
+      for(var i=1;i<=16;i++){
 
         if(i<=16 && getCookie("hotel"+i)!=""){
           if(i!=16){
@@ -48,7 +48,7 @@
       }
       $("#shoppingcart").text("You want to buy "+str);
 
-    }
+    
     if (getCookie("username")){
       $("#changeToLogout").text("LOGOUT");
     }
