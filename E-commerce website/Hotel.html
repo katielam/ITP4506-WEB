@@ -25,6 +25,183 @@
 <script src="jquery-1.11.1.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+  for(var i=1;i<;i++){
+    if(getCookie("hotel"+i)!=""){
+      $("#buyhotel"+i).hide();
+      $("#cancelhotel"+i).show();
+    }else{
+      $("#buyhotel"+i).show();
+      $("#cancelhotel"+i).hide();
+    }
+
+
+  }
+
+  $("#buyhotel1").click(function(){
+    setCookie("hotel1","HAPPY AIRLINE",30);
+    $(this).hide();
+    $("#cancelhotel1").show();
+  });
+  $("#buyhotel2").click(function(){
+    setCookie("hotel2","TRAVEL AIRLINE",30);
+    $(this).hide();
+    $("#cancelhotel2").show();
+  });
+  $("#buyhotel3").click(function(){
+    setCookie("hotel3","IVE AIRLINE",30);
+    $(this).hide();
+    $("#cancelhotel3").show();
+  });
+  $("#buyhotel4").click(function(){
+    setCookie("hotel4","5 STAR AIRLINE",30);
+    $(this).hide();
+    $("#cancelhotel4").show();
+  });
+  $("#buyhotel5").click(function(){
+    setCookie("hotel5","CHERRY AIRLINE",30);
+    $(this).hide();
+    $("#cancelhotel5").show();
+  });
+  $("#buyhotel6").click(function(){
+    setCookie("hotel6","TASMAN AIRLINE",30);
+    $(this).hide();
+    $("#cancelhotel6").show();
+  });
+  $("#buyhotel7").click(function(){
+    setCookie("hotel7","NORMAN AIRLINE",30);
+    $(this).hide();
+    $("#cancelhotel7").show();
+  });
+  $("#buyhotel8").click(function(){
+    setCookie("hotel8","MOONCAKE AIRLINE",30);
+    $(this).hide();
+    $("#cancelhotel8").show();
+  });
+    $("#buyhotel9").click(function(){
+      setCookie("hotel9","HAPPY AIRLINE",30);
+      $(this).hide();
+      $("#cancelhotel9").show();
+    });
+    $("#buyhotel10").click(function(){
+      setCookie("hotel10","TRAVEL AIRLINE",30);
+      $(this).hide();
+      $("#cancelhotel10").show();
+    });
+    $("#buyhotel11").click(function(){
+      setCookie("hotel11","IVE AIRLINE",30);
+      $(this).hide();
+      $("#cancelhotel11").show();
+    });
+    $("#buyhotel12").click(function(){
+      setCookie("hotel12","5 STAR AIRLINE",30);
+      $(this).hide();
+      $("#cancelhotel12").show();
+    });
+    $("#buyhotel13").click(function(){
+      setCookie("hotel13","CHERRY AIRLINE",30);
+      $(this).hide();
+      $("#cancelhotel13").show();
+    });
+    $("#buyhotel14").click(function(){
+      setCookie("hotel14","TASMAN AIRLINE",30);
+      $(this).hide();
+      $("#cancelhotel14").show();
+    });
+    $("#buyhotel15").click(function(){
+      setCookie("hotel15","NORMAN AIRLINE",30);
+      $(this).hide();
+      $("#cancelhotel15").show();
+    });
+    $("#buyhotel16").click(function(){
+      setCookie("hotel16","MOONCAKE AIRLINE",30);
+      $(this).hide();
+      $("#cancelhotel16").show();
+    });
+
+  });
+  <!-- ---------------------------------- -->
+  $("#cancelhotel1").click(function(){
+    setCookie("hotel1","",30);
+    $(this).hide();
+    $("#buyhotel1").show();
+  });
+  $("#cancelhotel2").click(function(){
+    setCookie("hotel2","",30);
+    $(this).hide();
+    $("#buyhotel2").show();
+  });
+  $("#cancelhotel3").click(function(){
+    setCookie("hotel3","",30);
+    $(this).hide();
+    $("#buyhotel3").show();
+  });
+  $("#cancelhotel4").click(function(){
+    setCookie("hotel4","",30);
+    $(this).hide();
+    $("#buyhotel4").show();
+  });
+  $("#cancelhotel5").click(function(){
+    setCookie("hotel5","",30);
+    $(this).hide();
+    $("#buyhotel5").show();
+  });
+  $("#cancelhotel6").click(function(){
+    setCookie("hotel6","",30);
+    $(this).hide();
+    $("#buyhotel6").show();
+  });
+  $("#cancelhotel7").click(function(){
+    setCookie("hotel7","",30);
+    $(this).hide();
+    $("#buyhotel7").show();
+  });
+  $("#cancelhotel8").click(function(){
+    setCookie("hotel8","",30);
+    $(this).hide();
+    $("#buyhotel8").show();
+  });
+
+  $("#cancelhotel9").click(function(){
+    setCookie("hotel9","",30);
+    $(this).hide();
+    $("#buyhotel9").show();
+  });
+  $("#cancelhotel10").click(function(){
+    setCookie("hotel10","",30);
+    $(this).hide();
+    $("#buyhotel10").show();
+  });
+  $("#cancelhotel11").click(function(){
+    setCookie("hotel11","",30);
+    $(this).hide();
+    $("#buyhotel11").show();
+  });
+  $("#cancelhotel12").click(function(){
+    setCookie("hotel12","",30);
+    $(this).hide();
+    $("#buyhotel12").show();
+  });
+  $("#cancelhotel13").click(function(){
+    setCookie("hotel13","",30);
+    $(this).hide();
+    $("#buyhotel13").show();
+  });
+  $("#cancelhotel14").click(function(){
+    setCookie("hotel14","",30);
+    $(this).hide();
+    $("#buyhotel14").show();
+  });
+  $("#cancelhotel15").click(function(){
+    setCookie("hotel15","",30);
+    $(this).hide();
+    $("#buyhotel15").show();
+  });
+  $("#cancelhotel16").click(function(){
+    setCookie("hotel16","",30);
+    $(this).hide();
+    $("#buyhotel16").show();
+  });
+
   if (getCookie("username")!=""){
     $("#changeToLogout").text("LOGOUT");
   }
@@ -197,7 +374,9 @@ function checkCookie() {
           </td>
         </tr>
       </table>
-      <a href="Payment.html" class="hotel-btn">Book Now</a>
+
+      <button  id="buyhotel1" class="hotel-btn">Book a hotel</button>
+      <button  id="cancelhotel1" class="hotel-btn">Cancel the hotel</button>
     </div> <!-- /.hotel-item -->
 
 
@@ -220,7 +399,8 @@ function checkCookie() {
           </td>
         </tr>
       </table>
-      <a href="Payment.html" class="hotel-btn">Book Now</a>
+      <button  id="buyhotel2" class="hotel-btn">Book a hotel</button>
+      <button  id="cancelhotel2" class="hotel-btn">Cancel the hotel</button>
     </div> <!-- /.hotel-item -->
 
 
@@ -243,7 +423,8 @@ function checkCookie() {
           </td>
         </tr>
       </table>
-      <a href="Payment.html" class="hotel-btn">Book Now</a>
+      <button  id="buyhotel3" class="hotel-btn">Book a hotel</button>
+      <button  id="cancelhotel3" class="hotel-btn">Cancel the hotel</button>
     </div> <!-- /.hotel-item -->
 
 
@@ -265,7 +446,8 @@ function checkCookie() {
           </td>
         </tr>
       </table>
-      <a href="Payment.html" class="hotel-btn">Book Now</a>
+      <button  id="buyhotel4" class="hotel-btn">Book a hotel</button>
+      <button  id="cancelhotel4" class="hotel-btn">Cancel the hotel</button>
     </div> <!-- /.hotel-item -->
 
     <div class="hotel-item">
@@ -286,7 +468,8 @@ function checkCookie() {
           </td>
         </tr>
       </table>
-      <a href="Payment.html" class="hotel-btn">Book Now</a>
+      <button  id="buyhotel5" class="hotel-btn">Book a hotel</button>
+      <button  id="cancelhotel5" class="hotel-btn">Cancel the hotel</button>
     </div> <!-- /.hotel-item -->
 
     <div class="hotel-item">
@@ -305,10 +488,11 @@ function checkCookie() {
           </td>
           <td>
             <p><img src="images/cherryhotel.jpg"></p>
-          </td>
+          </td7
         </tr>
       </table>
-      <a href="Payment.html" class="hotel-btn">Book Now</a>
+      <button  id="buyhotel6" class="hotel-btn">Book a hotel</button>
+      <button  id="cancelhotel6" class="hotel-btn">Cancel the hotel</button>
     </div> <!-- /.hotel-item -->
 
     <div class="hotel-item">
@@ -330,7 +514,8 @@ function checkCookie() {
           </td>
         </tr>
       </table>
-      <a href="Payment.html" class="hotel-btn">Book Now</a>
+      <button  id="buyhotel7" class="hotel-btn">Book a hotel</button>
+<button  id="cancelhotel7" class="hotel-btn">Cancel the hotel</button>
     </div> <!-- /.hotel-item -->
 
     <div class="hotel-item">
@@ -351,7 +536,8 @@ function checkCookie() {
           </td>
         </tr>
       </table>
-      <a href="Payment.html" class="hotel-btn">Book Now</a>
+      <button  id="buyhotel8" class="hotel-btn">Book a hotel</button>
+<button  id="cancelhotel8" class="hotel-btn">Cancel the hotel</button>
     </div> <!-- /.hotel-item -->
 
 
@@ -376,7 +562,8 @@ function checkCookie() {
           </td>
         </tr>
       </table>
-      <a href="Payment.html" class="hotel-btn">Book Now</a>
+      <button  id="buyhotel9" class="hotel-btn">Book a hotel</button>
+<button  id="cancelhotel9" class="hotel-btn">Cancel the hotel</button>
     </div> <!-- /.hotel-item -->
 
 
@@ -398,7 +585,8 @@ function checkCookie() {
           </td>
         </tr>
       </table>
-      <a href="Payment.html" class="hotel-btn">Book Now</a>
+      <button  id="buyhotel10" class="hotel-btn">Book a hotel</button>
+<button  id="cancelhotel10" class="hotel-btn">Cancel the hotel</button>
     </div> <!-- /.hotel-item -->
 
 
@@ -421,7 +609,8 @@ function checkCookie() {
           </td>
         </tr>
       </table>
-      <a href="Payment.html" class="hotel-btn">Book Now</a>
+      <button  id="buyhotel11" class="hotel-btn">Book a hotel</button>
+      <button  id="cancelhotel11" class="hotel-btn">Cancel the hotel</button>
     </div> <!-- /.hotel-item -->
 
 
@@ -442,7 +631,8 @@ function checkCookie() {
           </td>
         </tr>
       </table>
-      <a href="Payment.html" class="hotel-btn">Book Now</a>
+      <button  id="buyhotel12" class="hotel-btn">Book a hotel</button>
+<button  id="cancelhotel12" class="hotel-btn">Cancel the hotel</button>
     </div> <!-- /.hotel-item -->
 
     <div class="hotel-item">
@@ -462,7 +652,8 @@ function checkCookie() {
           </td>
         </tr>
       </table>
-      <a href="Payment.html" class="hotel-btn">Book Now</a>
+      <button  id="buyhotel13" class="hotel-btn">Book a hotel</button>
+<button  id="cancelhotel13" class="hotel-btn">Cancel the hotel</button>
     </div> <!-- /.hotel-item -->
 
     <div class="hotel-item">
@@ -483,7 +674,8 @@ function checkCookie() {
           </td>
         </tr>
       </table>
-      <a href="Payment.html" class="hotel-btn">Book Now</a>
+      <button  id="buyhotel14" class="hotel-btn">Book a hotel</button>
+<button  id="cancelhotel14" class="hotel-btn">Cancel the hotel</button>
     </div> <!-- /.hotel-item -->
 
     <div class="hotel-item">
@@ -504,7 +696,8 @@ function checkCookie() {
           </td>
         </tr>
       </table>
-      <a href="Payment.html" class="hotel-btn">Book Now</a>
+      <button  id="buyhotel15" class="hotel-btn">Book a hotel</button>
+<button  id="cancelhotel15" class="hotel-btn">Cancel the hotel</button>
     </div> <!-- /.hotel-item -->
 
     <div class="hotel-item">
@@ -524,12 +717,13 @@ function checkCookie() {
           </td>
         </tr>
       </table>
-      <a href="Payment.html" class="hotel-btn">Book Now</a>
+      <button  id="buyhotel16" class="hotel-btn">Book a hotel</button>
+<button  id="cancelhotel16" class="hotel-btn">Cancel the hotel</button>
     </div> <!-- /.hotel-item -->
 
 
   </div> <!-- /.container -->
-</div> <!-- /.ticket-list -->
+</div> <!-- /.hotel-list -->
 
 
 
