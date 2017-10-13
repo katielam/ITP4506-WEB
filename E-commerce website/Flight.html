@@ -27,29 +27,97 @@
 
 
             $(document).ready(function(){
+              for(var i=1;i<9;i++){
+                if(getCookie("ticket"+i)!=""){
+                  $("#buyticket"+i).hide();
+                  $("#cancelticket"+i).show();
+                }else{
+                  $("#buyticket"+i).show();
+                  $("#cancelticket"+i).hide();
+                }
+
+
+              }
               $("#buyticket1").click(function(){
-                setCookie("ticket","HAPPY AIRLINE",30);
+                setCookie("ticket1","HAPPY AIRLINE",30);
+                $(this).hide();
+                $("#cancelticket1").show();
               });
               $("#buyticket2").click(function(){
-                setCookie("ticket","TRAVEL AIRLINE",30);
+                setCookie("ticket2","TRAVEL AIRLINE",30);
+                $(this).hide();
+                $("#cancelticket2").show();
               });
               $("#buyticket3").click(function(){
-                setCookie("ticket","IVE AIRLINE",30);
+                setCookie("ticket3","IVE AIRLINE",30);
+                $(this).hide();
+                $("#cancelticket3").show();
               });
               $("#buyticket4").click(function(){
-                setCookie("ticket","5 STAR AIRLINE",30);
+                setCookie("ticket4","5 STAR AIRLINE",30);
+                $(this).hide();
+                $("#cancelticket4").show();
               });
               $("#buyticket5").click(function(){
-                setCookie("ticket","CHERRY AIRLINE",30);
+                setCookie("ticket5","CHERRY AIRLINE",30);
+                $(this).hide();
+                $("#cancelticket5").show();
               });
               $("#buyticket6").click(function(){
-                setCookie("ticket","TASMAN AIRLINE",30);
+                setCookie("ticket6","TASMAN AIRLINE",30);
+                $(this).hide();
+                $("#cancelticket6").show();
               });
               $("#buyticket7").click(function(){
-                setCookie("ticket","NORMAN AIRLINE",30);
+                setCookie("ticket7","NORMAN AIRLINE",30);
+                $(this).hide();
+                $("#cancelticket7").show();
               });
               $("#buyticket8").click(function(){
-                setCookie("ticket","MOONCAKE AIRLINE",30);
+                setCookie("ticket8","MOONCAKE AIRLINE",30);
+                $(this).hide();
+                $("#cancelticket8").show();
+              });
+              <!-- ---------------------------------- -->
+              $("#cancelticket1").click(function(){
+                setCookie("ticket1","",30);
+                $(this).hide();
+                $("#buyticket1").show();
+              });
+              $("#cancelticket2").click(function(){
+                setCookie("ticket2","",30);
+                $(this).hide();
+                $("#buyticket2").show();
+              });
+              $("#cancelticket3").click(function(){
+                setCookie("ticket3","",30);
+                $(this).hide();
+                $("#buyticket3").show();
+              });
+              $("#cancelticket4").click(function(){
+                setCookie("ticket4","",30);
+                $(this).hide();
+                $("#buyticket4").show();
+              });
+              $("#cancelticket5").click(function(){
+                setCookie("ticket5","",30);
+                $(this).hide();
+                $("#buyticket5").show();
+              });
+              $("#cancelticket6").click(function(){
+                setCookie("ticket6","",30);
+                $(this).hide();
+                $("#buyticket6").show();
+              });
+              $("#cancelticket7").click(function(){
+                setCookie("ticket7","",30);
+                $(this).hide();
+                $("#buyticket7").show();
+              });
+              $("#cancelticket8").click(function(){
+                setCookie("ticket8","",30);
+                $(this).hide();
+                $("#buyticket8").show();
               });
 
 
@@ -193,7 +261,8 @@
                               <p>22:45 - 20:35</p>
                               <p>From London To Hong Kong</p>
                               <p>HK$7197</p>
-                              <a href="Payment.html" id="buyticket1" class="flight-btn">Buy a ticket</a>
+                              <button  id="buyticket1" class="flight-btn">Buy a ticket</button>
+                              <button  id="cancelticket1" class="flight-btn">Cancel the ticket</button>
                           </div> <!-- /.flight-item -->
 
 
@@ -205,7 +274,8 @@
                               <p>15:45 - 17:35</p>
                               <p>From TaiWan To Hong Kong</p>
                               <p>HK$827</p>
-                              <a href="Payment.html" id="buyticket2" class="flight-btn">Buy a ticket</a>
+                              <button  id="buyticket2" class="flight-btn">Buy a ticket</button>
+                              <button  id="cancelticket2" class="flight-btn">Cancel the ticket</button>
                           </div> <!-- /.flight-item -->
 
 
@@ -217,7 +287,8 @@
                               <p>14:45 - 17:00</p>
                               <p>From Tokyo To Hong Kong</p>
                               <p>HK$2499</p>
-                              <a href="Payment.html" id="buyticket3" class="flight-btn">Buy a ticket</a>
+                              <button  id="buyticket3" class="flight-btn">Buy a ticket</button>
+                              <button  id="cancelticket3" class="flight-btn">Cancel the ticket</button>
                           </div> <!-- /.flight-item -->
 
 
@@ -229,7 +300,8 @@
                               <p>11：30 - 10：05</p>
                               <p>From Athens To Hong Kong</p>
                               <p>HK$4532</p>
-                              <a href="Payment.html" id="buyticket4" class="flight-btn">Buy a ticket</a>
+                              <button  id="buyticket4" class="flight-btn">Buy a ticket</button>
+                              <button  id="cancelticket4" class="flight-btn">Cancel the ticket</button>
                           </div> <!-- /.flight-item -->
 
                           <div class="flight-item">
@@ -240,7 +312,8 @@
                               <p>18：05 － 18：05</p>
                               <p>From Athens To Hong Kong</p>
                               <p>HK$6648</p>
-                              <a href="Payment.html" id="buyticket5" class="flight-btn">Buy a ticket</a>
+                              <button  id="buyticket5" class="flight-btn">Buy a ticket</button>
+                              <button  id="cancelticket5" class="flight-btn">Cancel the ticket</button>
                           </div> <!-- /.flight-item -->
 
 
@@ -252,7 +325,8 @@
                               <p>11：30 - 10：05</p>
                               <p>From Greek To Hong Kong</p>
                               <p>HK$7155</p>
-                              <a href="Payment.html" id="buyticket6" class="flight-btn">Buy a ticket</a>
+                              <button  id="buyticket6" class="flight-btn">Buy a ticket</button>
+                              <button  id="cancelticket6" class="flight-btn">Cancel the ticket</button>
                           </div> <!-- /.flight-item -->
 
 
@@ -264,7 +338,8 @@
                               <p>19:45 - 22:40</p>
                               <p>From Osaka To Hong Kong</p>
                               <p>HK$2079</p>
-                              <a href="Payment.html" id="buyticket7" class="flight-btn">Buy a ticket</a>
+                              <button id="buyticket7" class="flight-btn">Buy a ticket</button>
+                              <button  id="cancelticket7" class="flight-btn">Cancel the ticket</button>
                           </div> <!-- /.flight-item -->
 
 
@@ -276,7 +351,8 @@
                               <p>19:45 - 22:40</p>
                               <p>From Tokyo To Hong Kong</p>
                               <p>HK$2079</p>
-                              <a href="Payment.html" id="buyticket8" class="flight-btn">Buy a ticket</a>
+                              <button  id="buyticket8" class="flight-btn">Buy a ticket</button>
+                              <button  id="cancelticket8" class="flight-btn">Cancel the ticket</button>
                           </div> <!-- /.flight-item -->
 
 
