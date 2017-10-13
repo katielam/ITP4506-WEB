@@ -874,6 +874,7 @@ h4.consult-title {
 }
 
 
+
 .hotel-item-search select  {
   height:30px;
   width:500px;
@@ -1367,4 +1368,11 @@ div.contact-form input.mainBtn {
   margin:  300px;
   position: absolute;
 
+}
+
+.shoppingcart h4 {
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  color: #9ed034;
 }
