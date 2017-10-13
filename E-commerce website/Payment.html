@@ -23,14 +23,24 @@
   <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
   <script src="jquery-1.11.1.js" type="text/javascript"></script>
   <script type="text/javascript">
-  if (getCookie("username")){
+  $(document).ready(function(){
+
+
+  if (getCookie("username") != ""){
     $("#changeToLogout").text("LOGOUT");
+
   }
+  if(getCookie("ticket")!=""){
+    $("#checkTicket").text("You want to buy "+getCookie("ticket"));
+  }
+
   if($("#changeToLogout").text()=="LOGOUT"){
+    $("#checkifLogged").text("You have logged! You will get a 10% discount!");
     $("#changeToLogout").click(function(){
       setCookie("username","",30);
     });
   }
+  });
   function checkPayment(){
     var Fname = document.getElementById("Fname").value;
     var Lname = document.getElementById("Lname").value;
@@ -112,7 +122,7 @@
                   <li><a href="index.html">Home</a></li>
                   <li><a href="Hotel.html">Hotel</a></li>
                   <li><a href="Flight.html">Flight</a></li>
-                  <li><a href="Register.html">Register/Login</a></li>
+                  <li><a id="changeToLogout" href="Register.html">Register/Login</a></li>
                   <li><a href="shoppingcart.html"><div class="cart"><img src="images/shoppingcart.png"></div></a></li>
                 </ul>
                 <a href="#" class="toggle-menu visible-sm visible-xs">
@@ -147,9 +157,11 @@
           <div class="col-md-8 ">
             <h3 class="widget-title">Pay Now</h3>
 
-            <div class="formbtn">
+            <div id="checkifLogged" class="formbtn">
               <b>Login to get a discount!</b><button onclick="window.location.href='Register.html'" >Login</button>
+
             </div>
+            <div id="checkTicket"></div>
             <br>
             <button>Add your personal information</button>
             <div class="payment">
