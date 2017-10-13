@@ -25,7 +25,7 @@
 <script src="jquery-1.11.1.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-  for(var i=1;i<;i++){
+  for(var i=1;i<17;i++){
     if(getCookie("hotel"+i)!=""){
       $("#buyhotel"+i).hide();
       $("#cancelhotel"+i).show();
@@ -118,7 +118,7 @@ $(document).ready(function(){
       $("#cancelhotel16").show();
     });
 
-  });
+
   <!-- ---------------------------------- -->
   $("#cancelhotel1").click(function(){
     setCookie("hotel1","",30);
