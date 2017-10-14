@@ -23,6 +23,9 @@
   <script type="text/javascript">
   $(document).ready(function(){
 
+
+
+
       var str = "";
       var ticketarray = [];
       var hotelarray = [];
@@ -45,27 +48,35 @@
       if(ticketarray.length==0 && hotelarray.length==0){
         $("#shoppingcart").html("You have not choice any item!");
       }else{
-        str += "[AIRLINE]<br>"
+        // str += "[AIRLINE]<br>"
         for( var i=1;i<ticketarray.length+1;i++){
 
           if(getCookie("ticket"+i)!=""){
-            str += getCookie("ticket"+i);
-            str += "<br>";
+
+
+            $("#ticket"+i+"content").show();
           }
 
         }
-        str += "<br>"
-        str += "[HOTEL]<br>"
+        // str += "<br>"
+        // str += "[HOTEL]<br>"
         for( var i=1;i<hotelarray.length+1;i++){
 
           if(getCookie("hotel"+i)!=""){
-            str += getCookie("hotel"+i);
-            str += "<br>";
+            $("#hotel"+i+"content").show();
           }
 
         }
         $("#shoppingcart").html("You want to buy : <br>"+str);
       }
+
+
+
+
+
+
+
+
 
 
     if (getCookie("username")){
@@ -177,10 +188,449 @@
   <div class="shoppingcart">
         <h4>Shopping cart information</h4>
       </div>
+      <div id="photo" class=".shoppingcartphoto"></div>
         <div class="shoppingcart" id="shoppingcart">
+          <h4></h4>
 
-hello
         </div>
+        <div class="flight-list">
+            <div class="container">
+                        <div class="flight-item" id="ticket1content" hidden="hidden">
+                          <img src="images/EmiratesAirLine.svg.png">
+                            <h4><a href="#">HAPPY AIRLINE</a></h4>
+                            <p>19:10 - 24:55</p>
+                            <p>From Hong Kong To London</p>
+                            <p>22:45 - 20:35</p>
+                            <p>From London To Hong Kong</p>
+                            <p>HK$7197</p>
+                        </div> <!-- /.flight-item -->
+
+
+                        <div class="flight-item" id="ticket2content" hidden="hidden">
+                          <img src="images/tigerair.png">
+                            <h4><a href="#">TRAVEL AIRLINE</a></h4>
+                            <p>18:30 - 22:55</p>
+                            <p>From Hong Kong To TaiWan</p>
+                            <p>15:45 - 17:35</p>
+                            <p>From TaiWan To Hong Kong</p>
+                            <p>HK$827</p>
+                        </div> <!-- /.flight-item -->
+
+
+                        <div class="flight-item" id="ticket3content" hidden="hidden">
+                          <img src="images/Japan-Airlines-logo-original.png">
+                            <h4><a href="#">IVE AIRLINE</a></h4>
+                            <p>24:10 - 03:40</p>
+                            <p>From Hong Kong To Tokyo</p>
+                            <p>14:45 - 17:00</p>
+                            <p>From Tokyo To Hong Kong</p>
+                            <p>HK$2499</p>
+                        </div> <!-- /.flight-item -->
+
+
+                        <div class="flight-item" id="ticket4content" hidden="hidden">
+                          <img src="images/SKYGREECE.png">
+                            <h4><a href="#">5 STAR AIRLINE</a></h4>
+                            <p>22:55 - 08:45</p>
+                            <p>From Hong Kong To Athens</p>
+                            <p>11：30 - 10：05</p>
+                            <p>From Athens To Hong Kong</p>
+                            <p>HK$4532</p>
+                        </div> <!-- /.flight-item -->
+
+                        <div class="flight-item" id="ticket5content" hidden="hidden">
+                          <img src="images/SKYGREECE.png">
+                            <h4><a href="#">CHERRY AIRLINE</a></h4>
+                            <p>20：55 - 08：45</p>
+                            <p>From Hong Kong To Athens</p>
+                            <p>18：05 － 18：05</p>
+                            <p>From Athens To Hong Kong</p>
+                            <p>HK$6648</p>
+                        </div> <!-- /.flight-item -->
+
+
+                        <div class="flight-item" id="ticket6content" hidden="hidden">
+                          <img src="images/SKYGREECE.png">
+                            <h4><a href="#">TASMAN AIRLINE</a></h4>
+                            <p>01：20 - 11：45</p>
+                            <p>From Hong Kong To Greek</p>
+                            <p>11：30 - 10：05</p>
+                            <p>From Greek To Hong Kong</p>
+                            <p>HK$7155</p>
+                        </div> <!-- /.flight-item -->
+
+
+                        <div class="flight-item" id="ticket7content" hidden="hidden">
+                          <img src="images/Japan-Airlines-logo-original.png">
+                            <h4><a href="#">NORMAN AIRLINE</a></h4>
+                            <p>07:45 - 12:30</p>
+                            <p>From Hong Kong To Osaka</p>
+                            <p>19:45 - 22:40</p>
+                            <p>From Osaka To Hong Kong</p>
+                            <p>HK$2079</p>
+                        </div> <!-- /.flight-item -->
+
+
+                        <div class="flight-item" id="ticket8content" hidden="hidden">
+                          <img src="images/Japan-Airlines-logo-original.png">
+                            <h4><a href="#">MOONCAKE AIRLINE</a></h4>
+                            <p>9:10 - 12:30</p>
+                            <p>From Hong Kong To Tokyo</p>
+                            <p>19:45 - 22:40</p>
+                            <p>From Tokyo To Hong Kong</p>
+                            <p>HK$2079</p>
+                        </div> <!-- /.flight-item -->
+
+
+            </div> <!-- /.container -->
+        </div> <!-- /.ticket-list -->
+
+
+
+
+        <div class="hotle-list">
+          <div class="container">
+
+
+            <div class="hotel-item" hidden="hidden" id="hotel1content">
+              <table>
+                <tr>
+                  <td>  <br><br><br><br>
+
+                  </td>
+                  <td width="85%">
+                      <img src="images/5star.png">
+                      <h4><a href="#">LONDON HAPPY HOTEL</a></h4>
+                      <h3>London,Hippodrome Casino</h3>
+                      <h3>5 star(s)</h3>
+                      <h4>HK$8888 per night</h4>
+                    </td>
+
+
+                  <td colspan="5">
+                    <p><img src="images/happyhotel.jpg"></p>
+                  </td>
+                </tr>
+              </table>
+
+            </div> <!-- /.hotel-item -->
+
+
+            <div class="hotel-item" hidden="hidden" id="hotel2content">
+              <table>
+
+                <tr>
+                  <td>  <br><br><br><br>
+
+                  </td>
+                  <td width='85%'>
+                    <img src="images/4star.png">
+                    <h4><a href="#">LONDON TRAVEL HOTEL</a></h4>
+                    <h3>London,CENTRAL STATION</h3>
+                    <h3>4 star(s)</h3>
+                    <h4>HK$2200 per night</h4>
+                  </td>
+                  <td>
+                    <p><img src="images/travelhotel.jpg"></p>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- /.hotel-item -->
+
+
+            <div class="hotel-item" hidden="hidden" id="hotel3content">
+
+              <table>
+                <tr>
+                  <td>  <br><br><br><br>
+
+                  </td>
+                  <td width='85%'>
+                    <img src="images/1star.png">
+                    <h4><a href="#">LONDON IVE HOTEL</a></h4>
+                    <h3>London,British Museum</h3>
+                    <h3>1 star(s)</h3>
+                    <h4>HK$400 per night</h4>
+                  </td>
+                  <td>
+                    <p><img src="images/ivehotel.jpg"></p>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- /.hotel-item -->
+
+
+            <div class="hotel-item" hidden="hidden" id="hotel4content">
+              <table>
+                <tr>
+                  <td>  <br><br><br><br>
+
+                  </td>
+                  <td width='85%'>
+                    <img src="images/5star.png">
+                    <h4><a href="#">LONDON 5 STAR HOTEL</a></h4>
+                    <h3>LONDON,LONDON city</h3>
+                    <h3>5 star(s)</h3>
+                    <h4>HK$6000 per night</h4>
+                  </td>
+                  <td>
+                    <p><img src="images/5starhotel.jpg"></p>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- /.hotel-item -->
+
+            <div class="hotel-item" hidden="hidden" id="hotel5content">
+              <table>
+                <tr>
+                  <td>  <br><br><br><br>
+
+                  </td>
+                  <td width='85%'>
+                    <img src="images/4star.png">
+                    <h4><a href="#">LONDON 4 STAR HOTEL</a></h4>
+                    <h3>LONDON,LONDON BRIDGE</h3>
+                    <h3>4 star(s)</h3>
+                    <h4>HK$4500 per night</h4>
+                  </td>
+                  <td>
+                    <p><img src="images/4starhotel.jpg"></p>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- /.hotel-item -->
+            <div class="hotel-item" hidden="hidden" id="hotel6content">
+
+              <table>
+                <tr>
+                  <td>  <br><br><br><br>
+
+                  </td>
+                  <td width='85%'>
+                    <img src="images/3star.png">
+                    <h4><a href="#">LONDON CHERRY HOTEL</a></h4>
+                    <h3>LONDON,HARRODS</h3>
+                    <h3>3 star(s)</h3>
+                    <h4>HK$1300 per night</h4>
+                  </td>
+                  <td>
+                    <p><img src="images/cherryhotel.jpg"></p>
+                  </td7
+                </tr>
+              </table>
+            </div> <!-- /.hotel-item -->
+
+            <div class="hotel-item" hidden="hidden" id="hotet7content">
+
+              <table>
+                <tr>
+                  <td>  <br><br><br><br>
+
+                  </td>
+                  <td width='85%'>
+                    <img src="images/2star.png">
+                    <h4><a href="#">LONDON NORMAN HOTEL</a></h4>
+                    <h3>LONDON,LONDON BRIDGE</h3>
+                    <h3>2 star(s)</h3>
+                    <h4>HK$600 per night</h4>
+                  </td>
+                  <td>
+                    <p><img src="images/normanhotel.jpg"></p>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- /.hotel-item -->
+
+            <div class="hotel-item" hidden="hidden" id="hotel8content">
+              <table>
+                <tr>
+                  <td>  <br><br><br><br>
+
+                  </td>
+                  <td width='85%'>
+                    <img src="images/1star.png">
+                    <h4><a href="#">LONDON MOONCAKE HOTEL</a></h4>
+                    <h3>LONDON,ANGEL CENTRAL</h3>
+                    <h3>1 star(s)</h3>
+                    <h4>HK$100 per night</h4>
+                  </td>
+                  <td>
+                    <p><img src="images/mooncakehotel.jpg"></p>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- /.hotel-item -->
+
+
+
+            <!-- japan hotel-->
+
+            <div class="hotel-item" hidden="hidden" id="hotel9content">
+              <table>
+                <tr>
+                  <td>  <br><br><br><br>
+
+                  </td>
+                  <td width='85%'>
+                    <img src="images/5star.png">
+                    <h4><a href="#">JAPAN HAPPY HOTEL</a></h4>
+                    <h3>JAPAN,Hippodrome Casino</h3>
+                    <h3>5 star(s)</h3>
+                    <h4>HK$8888 per night</h4>
+                  </td>
+                  <td>
+                    <p><img src="images/happyhotel.jpg"></p>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- /.hotel-item -->
+
+
+            <div class="hotel-item" hidden="hidden" id="hotel10content">
+              <table>
+                <tr>
+                  <td>  <br><br><br><br>
+
+                  </td>
+                  <td width='85%'>
+                    <img src="images/4star.png">
+                    <h4><a href="#">JAPAN TRAVEL HOTEL</a></h4>
+                    <h3>JAPAN,British Museum</h3>
+                    <h3>4 star(s)</h3>
+                    <h4>HK$2200 per night</h4>
+                  </td>
+                  <td>
+                    <p><img src="images/travelhotel.jpg"></p>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- /.hotel-item -->
+
+
+            <div class="hotel-item" hidden="hidden" id="hotel11content">
+
+              <table>
+                <tr>
+                  <td>  <br><br><br><br>
+
+                  </td>
+                  <td width='85%'>
+                    <img src="images/1star.png">
+                    <h4><a href="#">JAPAN IVE HOTEL</a></h4>
+                    <h3>JAPAN,British Museum</h3>
+                    <h3> 1 star(s)</h3>
+                    <h4> HK$400 per night</h4>
+                  </td>
+                  <td>
+                    <p><img src="images/ivehotel.jpg"></p>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- /.hotel-item -->
+
+
+            <div class="hotel-item" hidden="hidden" id="hotel12content">
+              <table>
+                <tr>
+                  <td>  <br><br><br><br>
+
+                  </td>
+                  <td width='85%'>
+                    <img src="images/5star.png">
+                    <h4><a href="#">JAPAN 5 STAR HOTEL</a></h4>
+                    <h3> 5 star(s)</h3>
+                    <h4> HK$6000 per night</h4>
+                  </td>
+                  <td>
+                    <p><img src="images/5starhotel.jpg"></p>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- /.hotel-item -->
+
+            <div class="hotel-item" hidden="hidden" id="hotel13content">
+              <table>
+                <tr>
+                  <td>  <br><br><br><br>
+
+                  </td>
+                  <td width='85%'>
+                    <img src="images/4star.png">
+                    <h4><a href="#">JAPAN 4 STAR HOTEL</a></h4>
+                    <h3> 4 star(s)</h3>
+                    <h4>HK$4500 per night</h4>
+                  </td>
+                  <td>
+                    <p><img src="images/4starhotel.jpg"></p>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- /.hotel-item -->
+
+            <div class="hotel-item" hidden="hidden" id="hotel14content">
+
+              <table>
+                <tr>
+                  <td>  <br><br><br><br>
+
+                  </td>
+                  <td width='85%'>
+                    <img src="images/3star.png">
+                    <h4><a href="#">JAPAN CHERRY HOTEL</a></h4>
+                    <h3> 3 star(s)</h3>
+                    <h4>HK$1300 per night</h4>
+                  </td>
+                  <td>
+                    <p><img src="images/cherryhotel.jpg"></p>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- /.hotel-item -->
+
+            <div class="hotel-item" hidden="hidden" id="hotel15content">
+
+              <table>
+                <tr>
+                  <td>  <br><br><br><br>
+
+                  </td>
+                  <td width='85%'>
+                    <img src="images/2star.png">
+                    <h4><a href="#">JAPAN NORMAN HOTEL</a></h4>
+                    <h3> 2 star(s)</h3>
+                    <h4>HK$600 per night</h4>
+                  </td>
+                  <td>
+                    <p><img src="images/normanhotel.jpg"></p>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- /.hotel-item -->
+
+            <div class="hotel-item" hidden="hidden" id="hotel16content">
+              <table>
+                <tr>
+                  <td>  <br><br><br><br>
+
+                  </td>
+                  <td width='85%'>
+                    <img src="images/1star.png">
+                    <h4><a href="#">JAPAN MOONCAKE HOTEL</a></h4>
+                    <h3> 1 star(s)</h3>
+                    <h4>HK$100 per night</h4>
+                  </td>
+                  <td>
+                    <p><img src="images/mooncakehotel.jpg"></p>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- /.hotel-item -->
+
+
+          </div> <!-- /.container -->
+        </div> <!-- /.hotel-list -->
+
+
         <div class="flight-item-search"><a href="Payment.html"><button>payment</button></a></div>
         <!-- /.register-formtgtgtg -->
 
