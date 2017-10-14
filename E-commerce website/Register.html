@@ -59,7 +59,7 @@
       $("#profile").hide();
 
 
-      $("#profile").hide();
+
 
     }
     if($("#changeToLogout").text()=="LOGOUT"){
@@ -68,6 +68,7 @@
       });
     }
     $("#login_btn").click(function(){
+      $("#profile").show();
       if(document.getElementById("loginname").value==getCookie("username")){
         $("#changeToLogout").text("LOGOUT");
         alert("Welcome " + $("#loginname").val());
