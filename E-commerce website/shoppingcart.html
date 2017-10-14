@@ -24,33 +24,47 @@
   $(document).ready(function(){
 
       var str = "";
+      var ticketarray = [];
+      var hotelarray = [];
       for(var i=1;i<=8;i++){
 
-        if(i<=8 && getCookie("ticket"+i)!=""){
-          if(i!=8){
-            str += "["+getCookie("ticket"+i)+"] , ";
-          }else{
-            str += "["+getCookie("ticket"+i)+"]";
-          }
+        if(getCookie("ticket"+i)!=""){
+          ticketarray[i]=getCookie("ticket"+i);
         }
 
       }
       for(var i=1;i<=16;i++){
 
-        if(i<=16 && getCookie("hotel"+i)!=""){
-          if(i!=16){
-            str += "["+getCookie("hotel"+i)+"] , ";
-          }else{
-            str += "["+getCookie("hotel"+i)+"]";
-          }
+        if(getCookie("hotel"+i)!=""){
+
+            hotelarray[i]=getCookie("hotel"+i);
+
         }
 
       }
-      if(str==""){
-        $("#shoppingcart").text("<h4>You have not choice any item!");
+      if(ticketarray.length==0 && hotelarray.length==0){
+        $("#shoppingcart").html("You have not choice any item!");
       }else{
-        $("#shoppingcart").text("You want to buy "+str+".");
+        str += "[AIRLINE]<br>"
+        for( var i=1;i<ticketarray.length+1;i++){
 
+          if(getCookie("ticket"+i)!=""){
+            str += getCookie("ticket"+i);
+            str += "<br>";
+          }
+
+        }
+        str += "<br>"
+        str += "[HOTEL]<br>"
+        for( var i=1;i<hotelarray.length+1;i++){
+
+          if(getCookie("hotel"+i)!=""){
+            str += getCookie("hotel"+i);
+            str += "<br>";
+          }
+
+        }
+        $("#shoppingcart").html("You want to buy : <br>"+str);
       }
 
 
@@ -165,7 +179,7 @@
       </div>
         <div class="shoppingcart" id="shoppingcart">
 
-          hello
+hello
         </div>
         <div class="flight-item-search"><a href="Payment.html"><button>payment</button></a></div>
         <!-- /.register-formtgtgtg -->
