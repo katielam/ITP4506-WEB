@@ -34,22 +34,27 @@ $(document).ready(function(){
   });
   $("#bookNow2200").click(function(){
     setCookie("bookNow2","<div style='color: #9ed034'>Paris, Marseille, Lyon</div><div style='color: #e54747'>NEW PALACE, 5 NIGHTS, 5 STARS</div>HK$2200<br>",30);
+    setCookie("toMinus",buynowcost[1],30);
     location.href = "shoppingcart.html";
   });
   $("#bookNow3300").click(function(){
     setCookie("bookNow3","<div style='color: #9ed034'>Berlin, Hamburg, Munich</div><div style='color: #e54747'>LUXE HOTEL, 5 NIGHTS, 6 STARS</div>HK$3300<br>",30);
+    setCookie("toMinus",buynowcost[2],30);
     location.href = "shoppingcart.html";
   });
   $("#bookNow4400").click(function(){
     setCookie("bookNow4","<div style='color: #9ed034'>Madrid, Bercelona, Valencia</div><div style='color: #e54747'>GOOD HOTEL, 4 NIGHTS, 6 STARS</div>HK$4400<br>",30);
+    setCookie("toMinus",buynowcost[3],30);
     location.href = "shoppingcart.html";
   });
   $("#bookNow5500").click(function(){
     setCookie("bookNow5","<div style='color: #9ed034'>Amsterdam, Delft, The Hague</div><div style='color: #e54747'>BEST HOTEL, 6 NIGHTS, 7 STARS</div>HK$5500<br>",30);
+    setCookie("toMinus",buynowcost[4],30);
     location.href = "shoppingcart.html";
   });
   $("#bookNow6600").click(function(){
     setCookie("bookNow6","<div style='color: #9ed034'>Zürich, Geneva, Basel</div><div style='color: #e54747'>NEW HOTEL, 7 NIGHTS, 7 STARS</div>HK$6600<br>",30);
+    setCookie("toMinus",buynowcost[5],30);
     location.href = "shoppingcart.html";
   });
   if (getCookie("username")!=""){

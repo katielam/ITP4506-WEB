@@ -25,9 +25,12 @@
   <script type="text/javascript">
   $(document).ready(function(){
     $("#loading").hide();
+    var result = (parseInt(getCookie("total"))+parseInt(getCookie("toMinus")));
 
 
-
+    if(result=="NaN" || result==""){
+      result=1;
+    }
 
   if (getCookie("username") != ""){
     $("#changeToLogout").text("LOGOUT");
@@ -43,7 +46,7 @@
       setCookie("username","",30);
     });
   }
-  $("#printtotal").html("<font size='5'>You have to pay : HK$"+(parseInt(getCookie("total"))+parseInt(getCookie("toMinus")))+"</font>");
+  $("#printtotal").html("<font size='5'>You have to pay : HK$"+result+"</font>");
   });
   function checkPayment(){
 
