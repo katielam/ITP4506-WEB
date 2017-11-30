@@ -27,6 +27,7 @@
 
 
             $(document).ready(function(){
+              $("#loading").hide();
               for(var i=1;i<9;i++){
                 if(getCookie("ticket"+i)!=""){
                   $("#buyticket"+i).hide();
@@ -50,7 +51,7 @@
               });
               $("#buyticket3").click(function(){
                 setCookie("ticket3","IVE AIRLINE Ticket",30);
-                $(this).hide();
+                  $(this).hide();
                 $("#cancelticket3").show();
               });
               $("#buyticket4").click(function(){
@@ -122,10 +123,6 @@
 
 
 
-
-
-
-
               if (getCookie("username")!=""){
                 $("#changeToLogout").text("LOGOUT");
 
@@ -139,7 +136,15 @@
               }
               $("#condition").keyup(function(){
                   $("#search").click(function(){
-                $(".flight-item").hide().filter(":contains('" + $("#condition").val().toUpperCase() + "')").show();
+                    $("#loading").show();
+                    $("#all").css("filter","blur(5px)");
+                    $("#loading").css("filter","blur(0px)");
+                    setTimeout(function(){
+                      $(".flight-item").hide().filter(":contains('" + $("#condition").val().toUpperCase() + "')").show();
+                      $("#loading").hide();
+                      $("#all").css("filter","blur(0px)");
+                    },500);
+
                   });
               });
             });
@@ -186,7 +191,8 @@
           <!--[if lt IE 7]>
               <p class="chromeframe">Yougrtggr are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
           <![endif]-->
-
+              <div class="loading" id="loading"><img src="images/Blocks.gif"/></div>
+        <div id="all">
           <div class="site-header">
               <div class="container">
                   <div class="main-header">
@@ -239,13 +245,17 @@
           </div> <!-- /.middle-content -->
 
 
+
+
           <div class="go-act">
               <div class="container">
                 <div class="flight-item-search">
 
                           <center><h4><a href="#">Flight Searching</a></h4>
                             </center>
-                            <h3>Airline Name:<input id="condition" /></h3>
+                            <br>
+                            <br>
+                            <h3>Airline Name:<input id="condition" style="position: relative;"/></h3>
 
                             <a href="#" class="flight-btn" id="search">Search</a>
                             </div>
@@ -431,6 +441,7 @@
                   </div> <!-- /.row -->
               </div> <!-- /.container -->
           </div> <!-- /.site-footer -->
+        </div>
 
           <script src="js/vendor/jquery-1.11.0.min.js"></script>
           <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>

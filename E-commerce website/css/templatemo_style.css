@@ -692,7 +692,7 @@ h3.consult-title {
 }
 
 .go-act {
-  margin-bottom: 100px;
+  margin-bottom: 120px;
 }
 
 .act-btn {
@@ -1302,7 +1302,12 @@ div.contact-form input.mainBtn {
   color: #9ed034;
 }
 
+.loading {
 
+    position: fixed;
+    top: 35%;
+    left: 40%;
+}
 
 .formbtn button {
   width: 100%;

@@ -25,6 +25,7 @@
 <script src="jquery-1.11.1.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+  $("#loading").hide();
   for(var i=1;i<17;i++){
     if(getCookie("hotel"+i)!=""){
       $("#buyhotel"+i).hide();
@@ -216,8 +217,16 @@ $(document).ready(function(){
     });
   }
   $("#condition").keyup(function(){
+
     $("#search").click(function(){
-      $(".hotel-item").hide().filter(":contains('" + $("#selectlocation").val().toUpperCase() + " "+$("#condition").val().toUpperCase()+ "')").show();
+      $("#loading").show();
+      $("#all").css("filter","blur(5px)");
+      $("#loading").css("filter","blur(0px)");
+      setTimeout(function(){
+        $(".hotel-item").hide().filter(":contains('" + $("#selectlocation").val().toUpperCase() + " "+$("#condition").val().toUpperCase()+ "')").show();
+        $("#loading").hide();
+        $("#all").css("filter","blur(0px)");
+      },500);
 
     });
   });
@@ -263,8 +272,8 @@ function checkCookie() {
 </script>
 </head>
 <body>
-
-
+  <div class="loading" id="loading"><img src="images/Blocks.gif"/></div>
+<div id="all">
   <div class="site-header">
     <div class="container">
       <div class="main-header">
@@ -828,6 +837,7 @@ jQuery(function($){
   });
 });
 </script>
+</div>
 <!-- templatemo 409 travel -->
 </body>
 </html>
