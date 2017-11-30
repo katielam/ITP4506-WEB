@@ -22,8 +22,12 @@
   <script src="jquery-1.11.1.js" type="text/javascript"></script>
   <script type="text/javascript">
   $(document).ready(function(){
+
+    var toMinus = 0;
+
     $("#loading").hide();
     $("#payment").click(function(){
+      toMinus = 0;
       var x = $("#shoppingcart").text();
 
       if(x != "You have not choice any item!"){
@@ -42,7 +46,6 @@
         setTimeout(function(){
           $("#loading").hide();
           $("#all").css("filter","blur(0px)");
-          alert(x);
         },500);
       }
 
@@ -54,6 +57,7 @@
       var ticketarray = [];
       var hotelarray = [];
       var bookNowarray = [];
+      var buynowcost = [1700,2200,3300,4400,5500,6600];
 
 
       for(var i=1;i<=6;i++){
@@ -165,6 +169,8 @@
       }
     }
   }
+
+
 
   </script>
 </head>

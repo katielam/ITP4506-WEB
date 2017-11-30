@@ -34,181 +34,248 @@ $(document).ready(function(){
       $("#buyhotel"+i).show();
       $("#cancelhotel"+i).hide();
     }
-
-
   }
+
+  if(getCookie("total")=="NaN" || getCookie("total")==""){
+    setCookie("total",0,30);
+  }
+  
+  var hotelcost = [8888,2200,400,6000,4500,1300,600,100,8888,2200,400,6000,4500,1300,600,100];
 
   $("#buyhotel1").click(function(){
     setCookie("hotel1","LONDON HAPPY HOTEL",30);
+    setCookie("total",parseInt(getCookie("total"))+hotelcost[0],30);
     $(this).hide();
     $("#cancelhotel1").show();
   });
   $("#buyhotel2").click(function(){
     setCookie("hotel2","LONDON TRAVEL HOTEL",30);
+    setCookie("total",parseInt(getCookie("total"))+hotelcost[1],30);
+
     $(this).hide();
     $("#cancelhotel2").show();
   });
   $("#buyhotel3").click(function(){
     setCookie("hotel3","LONDON IVE HOTEL",30);
+    setCookie("total",parseInt(getCookie("total"))+hotelcost[2],30);
+
     $(this).hide();
     $("#cancelhotel3").show();
   });
   $("#buyhotel4").click(function(){
     setCookie("hotel4","LONDON 5 STAR HOTEL",30);
+    setCookie("total",parseInt(getCookie("total"))+hotelcost[3],30);
+
     $(this).hide();
     $("#cancelhotel4").show();
   });
   $("#buyhotel5").click(function(){
     setCookie("hotel5","LONDON CHERRY HOTEL",30);
+    setCookie("total",parseInt(getCookie("total"))+hotelcost[4],30);
+
     $(this).hide();
     $("#cancelhotel5").show();
   });
   $("#buyhotel6").click(function(){
     setCookie("hotel6","LONDON TASMAN HOTEL",30);
+    setCookie("total",parseInt(getCookie("total"))+hotelcost[5],30);
+
     $(this).hide();
     $("#cancelhotel6").show();
   });
   $("#buyhotel7").click(function(){
     setCookie("hotel7","LONDON NORMAN HOTEL",30);
+    setCookie("total",parseInt(getCookie("total"))+hotelcost[6],30);
+
     $(this).hide();
     $("#cancelhotel7").show();
   });
   $("#buyhotel8").click(function(){
     setCookie("hotel8","LONDON MOONCAKE HOTEL",30);
+    setCookie("total",parseInt(getCookie("total"))+hotelcost[7],30);
+
     $(this).hide();
     $("#cancelhotel8").show();
   });
-    $("#buyhotel9").click(function(){
-      setCookie("hotel9","JAPAN HAPPY HOTEL",30);
-      $(this).hide();
-      $("#cancelhotel9").show();
-    });
-    $("#buyhotel10").click(function(){
-      setCookie("hotel10","JAPAN TRAVEL HOTEL",30);
-      $(this).hide();
-      $("#cancelhotel10").show();
-    });
-    $("#buyhotel11").click(function(){
-      setCookie("hotel11","JAPAN IVE HOTEL",30);
-      $(this).hide();
-      $("#cancelhotel11").show();
-    });
-    $("#buyhotel12").click(function(){
-      setCookie("hotel12","JAPAN 5 STAR HOTEL",30);
-      $(this).hide();
-      $("#cancelhotel12").show();
-    });
-    $("#buyhotel13").click(function(){
-      setCookie("hotel13","JAPAN CHERRY HOTEL",30);
-      $(this).hide();
-      $("#cancelhotel13").show();
-    });
-    $("#buyhotel14").click(function(){
-      setCookie("hotel14","JAPAN TASMAN HOTEL",30);
-      $(this).hide();
-      $("#cancelhotel14").show();
-    });
-    $("#buyhotel15").click(function(){
-      setCookie("hotel15","JAPAN NORMAN HOTEL",30);
-      $(this).hide();
-      $("#cancelhotel15").show();
-    });
-    $("#buyhotel16").click(function(){
-      setCookie("hotel16","JAPAN MOONCAKE HOTEL",30);
-      $(this).hide();
-      $("#cancelhotel16").show();
-    });
+  $("#buyhotel9").click(function(){
+    setCookie("hotel9","JAPAN HAPPY HOTEL",30);
+    setCookie("total",parseInt(getCookie("total"))+hotelcost[8],30);
+
+    $(this).hide();
+    $("#cancelhotel9").show();
+  });
+  $("#buyhotel10").click(function(){
+    setCookie("hotel10","JAPAN TRAVEL HOTEL",30);
+    setCookie("total",parseInt(getCookie("total"))+hotelcost[9],30);
+
+    $(this).hide();
+    $("#cancelhotel10").show();
+  });
+  $("#buyhotel11").click(function(){
+    setCookie("hotel11","JAPAN IVE HOTEL",30);
+    setCookie("total",parseInt(getCookie("total"))+hotelcost[10],30);
+
+    $(this).hide();
+    $("#cancelhotel11").show();
+  });
+  $("#buyhotel12").click(function(){
+    setCookie("hotel12","JAPAN 5 STAR HOTEL",30);
+    setCookie("total",parseInt(getCookie("total"))+hotelcost[11],30);
+
+    $(this).hide();
+    $("#cancelhotel12").show();
+  });
+  $("#buyhotel13").click(function(){
+    setCookie("hotel13","JAPAN CHERRY HOTEL",30);
+    setCookie("total",parseInt(getCookie("total"))+hotelcost[12],30);
+
+    $(this).hide();
+    $("#cancelhotel13").show();
+  });
+  $("#buyhotel14").click(function(){
+    setCookie("hotel14","JAPAN TASMAN HOTEL",30);
+    setCookie("total",parseInt(getCookie("total"))+hotelcost[13],30);
+
+    $(this).hide();
+    $("#cancelhotel14").show();
+  });
+  $("#buyhotel15").click(function(){
+    setCookie("hotel15","JAPAN NORMAN HOTEL",30);
+    setCookie("total",parseInt(getCookie("total"))+hotelcost[14],30);
+
+    $(this).hide();
+    $("#cancelhotel15").show();
+  });
+  $("#buyhotel16").click(function(){
+    setCookie("hotel16","JAPAN MOONCAKE HOTEL",30);
+    setCookie("total",parseInt(getCookie("total"))+hotelcost[15],30);
+
+    $(this).hide();
+    $("#cancelhotel16").show();
+  });
 
 
   <!-- ---------------------------------- -->
   $("#cancelhotel1").click(function(){
     setCookie("hotel1","",30);
+    setCookie("total",parseInt(getCookie("total"))-hotelcost[0],30);
+
     $(this).hide();
     $("#buyhotel1").show();
   });
   $("#cancelhotel2").click(function(){
     setCookie("hotel2","",30);
+    setCookie("total",parseInt(getCookie("total"))-hotelcost[1],30);
+
     $(this).hide();
     $("#buyhotel2").show();
   });
   $("#cancelhotel3").click(function(){
     setCookie("hotel3","",30);
+    setCookie("total",parseInt(getCookie("total"))-hotelcost[2],30);
+
     $(this).hide();
     $("#buyhotel3").show();
   });
   $("#cancelhotel4").click(function(){
     setCookie("hotel4","",30);
+    setCookie("total",parseInt(getCookie("total"))-hotelcost[3],30);
+
     $(this).hide();
     $("#buyhotel4").show();
   });
   $("#cancelhotel5").click(function(){
     setCookie("hotel5","",30);
+    setCookie("total",parseInt(getCookie("total"))-hotelcost[4],30);
+
     $(this).hide();
     $("#buyhotel5").show();
   });
   $("#cancelhotel6").click(function(){
     setCookie("hotel6","",30);
+    setCookie("total",parseInt(getCookie("total"))-hotelcost[5],30);
+
     $(this).hide();
     $("#buyhotel6").show();
   });
   $("#cancelhotel7").click(function(){
     setCookie("hotel7","",30);
+    setCookie("total",parseInt(getCookie("total"))-hotelcost[6],30);
+
     $(this).hide();
     $("#buyhotel7").show();
   });
   $("#cancelhotel8").click(function(){
     setCookie("hotel8","",30);
+    setCookie("total",parseInt(getCookie("total"))-hotelcost[7],30);
+
     $(this).hide();
     $("#buyhotel8").show();
   });
 
   $("#cancelhotel9").click(function(){
     setCookie("hotel9","",30);
+    setCookie("total",parseInt(getCookie("total"))-hotelcost[8],30);
+
     $(this).hide();
     $("#buyhotel9").show();
   });
   $("#cancelhotel10").click(function(){
     setCookie("hotel10","",30);
+    setCookie("total",parseInt(getCookie("total"))-hotelcost[9],30);
+
     $(this).hide();
     $("#buyhotel10").show();
   });
   $("#cancelhotel11").click(function(){
     setCookie("hotel11","",30);
+    setCookie("total",parseInt(getCookie("total"))-hotelcost[10],30);
+
     $(this).hide();
     $("#buyhotel11").show();
   });
   $("#cancelhotel12").click(function(){
     setCookie("hotel12","",30);
+    setCookie("total",parseInt(getCookie("total"))-hotelcost[11],30);
+
     $(this).hide();
     $("#buyhotel12").show();
   });
   $("#cancelhotel13").click(function(){
     setCookie("hotel13","",30);
+    setCookie("total",parseInt(getCookie("total"))-hotelcost[12],30);
+
     $(this).hide();
     $("#buyhotel13").show();
   });
   $("#cancelhotel14").click(function(){
     setCookie("hotel14","",30);
+    setCookie("total",parseInt(getCookie("total"))-hotelcost[13],30);
+
     $(this).hide();
     $("#buyhotel14").show();
   });
   $("#cancelhotel15").click(function(){
     setCookie("hotel15","",30);
+    setCookie("total",parseInt(getCookie("total"))-hotelcost[14],30);
+
     $(this).hide();
     $("#buyhotel15").show();
   });
   $("#cancelhotel16").click(function(){
     setCookie("hotel16","",30);
+    setCookie("total",parseInt(getCookie("total"))-hotelcost[15],30);
+
     $(this).hide();
     $("#buyhotel16").show();
   });
 
   if (getCookie("username")!=""){
     $("#changeToLogout").text("LOGOUT");
-    }
-    else{
-      $("#profile").hide();
-    }
+  }
+  else{
+    $("#profile").hide();
+  }
 
 
   if($("#changeToLogout").text()=="LOGOUT"){
@@ -235,147 +302,147 @@ $(document).ready(function(){
 <script>
 
 function setCookie(cname,cvalue,exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires=" + d.toGMTString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
 function getCookie(cname) {
-    var name = cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
     }
-    return "";
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }
 
 function checkCookie() {
-    var user=getCookie("username");
-    if (user != "") {
-        alert("Welcome again " + user);
-    } else {
-       user = prompt("Please enter your name:","");
-       if (user != "" && user != null) {
-           setCookie("username", user, 30);
-       }
+  var user=getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+    user = prompt("Please enter your name:","");
+    if (user != "" && user != null) {
+      setCookie("username", user, 30);
     }
+  }
 }
 
 </script>
 </head>
 <body>
   <div class="loading" id="loading"><img src="images/Blocks.gif"/></div>
-<div id="all">
-  <div class="site-header">
-    <div class="container">
-      <div class="main-header">
+  <div id="all">
+    <div class="site-header">
+      <div class="container">
+        <div class="main-header">
+          <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-10">
+              <div class="logo">
+                <a href="#">
+                  <img src="images/logo.png" alt="travel html5 template" title="travel html5 template">
+                </a>
+              </div> <!-- /.logo -->
+            </div> <!-- /.col-md-4 -->
+            <div class="col-md-8 col-sm-6 col-xs-2">
+              <div class="main-menu">
+                <ul class="visible-lg visible-md">
+                  <li><a href="index.html">Home</a></li>
+                  <li class="active"><a href="Hotel.html">Hotel</a></li>
+                  <li><a href="Flight.html">Flight</a></li>
+                  <li><a href="Register.html" id="changeToLogout">Register/Login</a></li>
+
+                  <li><a href="shoppingcart.html"><div class="cart"><img src="images/shoppingcart.png"></div></a></li>
+                  <li id="profile"><a href="Profile.html">Profile</a></li>
+                </ul>
+                <a href="#" class="toggle-menu visible-sm visible-xs">
+                  <i class="fa fa-bars"></i>
+                </a>
+              </div> <!-- /.main-menu -->
+            </div> <!-- /.col-md-8 -->
+          </div> <!-- /.row -->
+        </div> <!-- /.main-header -->
         <div class="row">
-          <div class="col-md-4 col-sm-6 col-xs-10">
-            <div class="logo">
-              <a href="#">
-                <img src="images/logo.png" alt="travel html5 template" title="travel html5 template">
-              </a>
-            </div> <!-- /.logo -->
-          </div> <!-- /.col-md-4 -->
-          <div class="col-md-8 col-sm-6 col-xs-2">
-            <div class="main-menu">
-              <ul class="visible-lg visible-md">
+          <div class="col-md-12 visible-sm visible-xs">
+            <div class="menu-responsive">
+              <ul>
                 <li><a href="index.html">Home</a></li>
                 <li class="active"><a href="Hotel.html">Hotel</a></li>
                 <li><a href="Flight.html">Flight</a></li>
-                <li><a href="Register.html" id="changeToLogout">Register/Login</a></li>
-
-                <li><a href="shoppingcart.html"><div class="cart"><img src="images/shoppingcart.png"></div></a></li>
-                <li id="profile"><a href="Profile.html">Profile</a></li>
+                <li><a href="Register.html">Register/Login</a></li>
               </ul>
-              <a href="#" class="toggle-menu visible-sm visible-xs">
-                <i class="fa fa-bars"></i>
-              </a>
-            </div> <!-- /.main-menu -->
-          </div> <!-- /.col-md-8 -->
+            </div> <!-- /.menu-responsive -->
+          </div> <!-- /.col-md-12 -->
         </div> <!-- /.row -->
-      </div> <!-- /.main-header -->
-      <div class="row">
-        <div class="col-md-12 visible-sm visible-xs">
-          <div class="menu-responsive">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li class="active"><a href="Hotel.html">Hotel</a></li>
-              <li><a href="Flight.html">Flight</a></li>
-              <li><a href="Register.html">Register/Login</a></li>
-            </ul>
-          </div> <!-- /.menu-responsive -->
-        </div> <!-- /.col-md-12 -->
-      </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </div> <!-- /.site-header -->
+
+    <div class="page-top" id="templatemo_services">
+    </div> <!-- /.page-header -->
+
+    <div class="middle-content">
+
+    </div> <!-- /.middle-content -->
+
+
+
+    <div class="go-act">
+      <div class="container">
+        <div class="hotel-item-search">
+          <center><h4><a href="#">Hotel Searching</a></h4>
+            <table >
+              <tr>
+                <th>From:</th>
+                <td><input type="date"/></td>
+                <th>  To:</th>
+                <td><input type="date"/></td>
+              </tr>
+              <tr>
+                <th>Location:</th>
+                <td><select id="selectlocation">
+                  <option value="london" >London</option>
+                  <option value="japan" >Japan</option>
+                </select>
+              </td>
+              <th>  Rooms:</th>
+              <td><select><option value="1">1</option><option value="2">2</option></select></td>
+              <tr>
+                <td><br><br></td>
+              </tr>
+            </tr>
+            <tr>
+              <th>Hotel Name/Location:</th>
+              <td><br><input tyep="text" id="condition" /></td>
+            </tr>
+          </table>
+        </center>
+        <br>
+        <button id="search" >Search</button>
+      </div>
     </div> <!-- /.container -->
-  </div> <!-- /.site-header -->
-
-  <div class="page-top" id="templatemo_services">
-  </div> <!-- /.page-header -->
-
-  <div class="middle-content">
-
-  </div> <!-- /.middle-content -->
+  </div> <!-- /.go-act -->
 
 
 
-  <div class="go-act">
+  <div class="hotle-list">
     <div class="container">
-      <div class="hotel-item-search">
-        <center><h4><a href="#">Hotel Searching</a></h4>
-          <table >
-            <tr>
-              <th>From:</th>
-              <td><input type="date"/></td>
-              <th>  To:</th>
-              <td><input type="date"/></td>
-            </tr>
-            <tr>
-              <th>Location:</th>
-              <td><select id="selectlocation">
-                <option value="london" >London</option>
-                <option value="japan" >Japan</option>
-              </select>
-            </td>
-            <th>  Rooms:</th>
-            <td><select><option value="1">1</option><option value="2">2</option></select></td>
-            <tr>
-              <td><br><br></td>
-            </tr>
-          </tr>
+
+
+      <div class="hotel-item">
+        <table>
           <tr>
-            <th>Hotel Name/Location:</th>
-            <td><br><input tyep="text" id="condition" /></td>
-          </tr>
-        </table>
-      </center>
-      <br>
-      <button id="search" >Search</button>
-    </div>
-  </div> <!-- /.container -->
-</div> <!-- /.go-act -->
+            <td>  <br><br><br><br>
 
-
-
-<div class="hotle-list">
-  <div class="container">
-
-
-    <div class="hotel-item">
-      <table>
-        <tr>
-          <td>  <br><br><br><br>
-
-          </td>
-          <td width="85%">
+            </td>
+            <td width="85%">
               <img src="images/5star.png">
               <h4><a href="#">LONDON HAPPY HOTEL</a></h4>
               <h3>London,Hippodrome Casino</h3>
@@ -384,460 +451,460 @@ function checkCookie() {
             </td>
 
 
-          <td colspan="5">
-            <p><img src="images/happyhotel.jpg"></p>
-          </td>
-        </tr>
-      </table>
+            <td colspan="5">
+              <p><img src="images/happyhotel.jpg"></p>
+            </td>
+          </tr>
+        </table>
 
-      <button  id="buyhotel1" class="hotel-btn">Book a hotel</button>
-      <button  id="cancelhotel1" class="hotel-btn">Cancel the hotel</button>
-    </div> <!-- /.hotel-item -->
-
-
-    <div class="hotel-item">
-      <table>
-
-        <tr>
-          <td>  <br><br><br><br>
-
-          </td>
-          <td width='85%'>
-            <img src="images/4star.png">
-            <h4><a href="#">LONDON TRAVEL HOTEL</a></h4>
-            <h3>London,CENTRAL STATION</h3>
-            <h3>4 star(s)</h3>
-            <h4>HK$2200 per night</h4>
-          </td>
-          <td>
-            <p><img src="images/travelhotel.jpg"></p>
-          </td>
-        </tr>
-      </table>
-      <button  id="buyhotel2" class="hotel-btn">Book a hotel</button>
-      <button  id="cancelhotel2" class="hotel-btn">Cancel the hotel</button>
-    </div> <!-- /.hotel-item -->
+        <button  id="buyhotel1" class="hotel-btn">Book a hotel</button>
+        <button  id="cancelhotel1" class="hotel-btn">Cancel the hotel</button>
+      </div> <!-- /.hotel-item -->
 
 
-    <div class="hotel-item">
+      <div class="hotel-item">
+        <table>
 
-      <table>
-        <tr>
-          <td>  <br><br><br><br>
+          <tr>
+            <td>  <br><br><br><br>
 
-          </td>
-          <td width='85%'>
-            <img src="images/1star.png">
-            <h4><a href="#">LONDON IVE HOTEL</a></h4>
-            <h3>London,British Museum</h3>
-            <h3>1 star(s)</h3>
-            <h4>HK$400 per night</h4>
-          </td>
-          <td>
-            <p><img src="images/ivehotel.jpg"></p>
-          </td>
-        </tr>
-      </table>
-      <button  id="buyhotel3" class="hotel-btn">Book a hotel</button>
-      <button  id="cancelhotel3" class="hotel-btn">Cancel the hotel</button>
-    </div> <!-- /.hotel-item -->
-
-
-    <div class="hotel-item">
-      <table>
-        <tr>
-          <td>  <br><br><br><br>
-
-          </td>
-          <td width='85%'>
-            <img src="images/5star.png">
-            <h4><a href="#">LONDON 5 STAR HOTEL</a></h4>
-            <h3>LONDON,LONDON city</h3>
-            <h3>5 star(s)</h3>
-            <h4>HK$6000 per night</h4>
-          </td>
-          <td>
-            <p><img src="images/5starhotel.jpg"></p>
-          </td>
-        </tr>
-      </table>
-      <button  id="buyhotel4" class="hotel-btn">Book a hotel</button>
-      <button  id="cancelhotel4" class="hotel-btn">Cancel the hotel</button>
-    </div> <!-- /.hotel-item -->
-
-    <div class="hotel-item">
-      <table>
-        <tr>
-          <td>  <br><br><br><br>
-
-          </td>
-          <td width='85%'>
-            <img src="images/4star.png">
-            <h4><a href="#">LONDON 4 STAR HOTEL</a></h4>
-            <h3>LONDON,LONDON BRIDGE</h3>
-            <h3>4 star(s)</h3>
-            <h4>HK$4500 per night</h4>
-          </td>
-          <td>
-            <p><img src="images/4starhotel.jpg"></p>
-          </td>
-        </tr>
-      </table>
-      <button  id="buyhotel5" class="hotel-btn">Book a hotel</button>
-      <button  id="cancelhotel5" class="hotel-btn">Cancel the hotel</button>
-    </div> <!-- /.hotel-item -->
-
-    <div class="hotel-item">
-
-      <table>
-        <tr>
-          <td>  <br><br><br><br>
-
-          </td>
-          <td width='85%'>
-            <img src="images/3star.png">
-            <h4><a href="#">LONDON CHERRY HOTEL</a></h4>
-            <h3>LONDON,HARRODS</h3>
-            <h3>3 star(s)</h3>
-            <h4>HK$1300 per night</h4>
-          </td>
-          <td>
-            <p><img src="images/cherryhotel.jpg"></p>
-          </td7
-        </tr>
-      </table>
-      <button  id="buyhotel6" class="hotel-btn">Book a hotel</button>
-      <button  id="cancelhotel6" class="hotel-btn">Cancel the hotel</button>
-    </div> <!-- /.hotel-item -->
-
-    <div class="hotel-item">
-
-      <table>
-        <tr>
-          <td>  <br><br><br><br>
-
-          </td>
-          <td width='85%'>
-            <img src="images/2star.png">
-            <h4><a href="#">LONDON NORMAN HOTEL</a></h4>
-            <h3>LONDON,LONDON BRIDGE</h3>
-            <h3>2 star(s)</h3>
-            <h4>HK$600 per night</h4>
-          </td>
-          <td>
-            <p><img src="images/normanhotel.jpg"></p>
-          </td>
-        </tr>
-      </table>
-      <button  id="buyhotel7" class="hotel-btn">Book a hotel</button>
-<button  id="cancelhotel7" class="hotel-btn">Cancel the hotel</button>
-    </div> <!-- /.hotel-item -->
-
-    <div class="hotel-item">
-      <table>
-        <tr>
-          <td>  <br><br><br><br>
-
-          </td>
-          <td width='85%'>
-            <img src="images/1star.png">
-            <h4><a href="#">LONDON MOONCAKE HOTEL</a></h4>
-            <h3>LONDON,ANGEL CENTRAL</h3>
-            <h3>1 star(s)</h3>
-            <h4>HK$100 per night</h4>
-          </td>
-          <td>
-            <p><img src="images/mooncakehotel.jpg"></p>
-          </td>
-        </tr>
-      </table>
-      <button  id="buyhotel8" class="hotel-btn">Book a hotel</button>
-<button  id="cancelhotel8" class="hotel-btn">Cancel the hotel</button>
-    </div> <!-- /.hotel-item -->
+            </td>
+            <td width='85%'>
+              <img src="images/4star.png">
+              <h4><a href="#">LONDON TRAVEL HOTEL</a></h4>
+              <h3>London,CENTRAL STATION</h3>
+              <h3>4 star(s)</h3>
+              <h4>HK$2200 per night</h4>
+            </td>
+            <td>
+              <p><img src="images/travelhotel.jpg"></p>
+            </td>
+          </tr>
+        </table>
+        <button  id="buyhotel2" class="hotel-btn">Book a hotel</button>
+        <button  id="cancelhotel2" class="hotel-btn">Cancel the hotel</button>
+      </div> <!-- /.hotel-item -->
 
 
+      <div class="hotel-item">
 
-    <!-- japan hotel-->
+        <table>
+          <tr>
+            <td>  <br><br><br><br>
 
-    <div class="hotel-item">
-      <table>
-        <tr>
-          <td>  <br><br><br><br>
-
-          </td>
-          <td width='85%'>
-            <img src="images/5star.png">
-            <h4><a href="#">JAPAN HAPPY HOTEL</a></h4>
-            <h3>JAPAN,Hippodrome Casino</h3>
-            <h3>5 star(s)</h3>
-            <h4>HK$8888 per night</h4>
-          </td>
-          <td>
-            <p><img src="images/happyhotel.jpg"></p>
-          </td>
-        </tr>
-      </table>
-      <button  id="buyhotel9" class="hotel-btn">Book a hotel</button>
-<button  id="cancelhotel9" class="hotel-btn">Cancel the hotel</button>
-    </div> <!-- /.hotel-item -->
+            </td>
+            <td width='85%'>
+              <img src="images/1star.png">
+              <h4><a href="#">LONDON IVE HOTEL</a></h4>
+              <h3>London,British Museum</h3>
+              <h3>1 star(s)</h3>
+              <h4>HK$400 per night</h4>
+            </td>
+            <td>
+              <p><img src="images/ivehotel.jpg"></p>
+            </td>
+          </tr>
+        </table>
+        <button  id="buyhotel3" class="hotel-btn">Book a hotel</button>
+        <button  id="cancelhotel3" class="hotel-btn">Cancel the hotel</button>
+      </div> <!-- /.hotel-item -->
 
 
-    <div class="hotel-item">
-      <table>
-        <tr>
-          <td>  <br><br><br><br>
+      <div class="hotel-item">
+        <table>
+          <tr>
+            <td>  <br><br><br><br>
 
-          </td>
-          <td width='85%'>
-            <img src="images/4star.png">
-            <h4><a href="#">JAPAN TRAVEL HOTEL</a></h4>
-            <h3>JAPAN,British Museum</h3>
-            <h3>4 star(s)</h3>
-            <h4>HK$2200 per night</h4>
-          </td>
-          <td>
-            <p><img src="images/travelhotel.jpg"></p>
-          </td>
-        </tr>
-      </table>
-      <button  id="buyhotel10" class="hotel-btn">Book a hotel</button>
-<button  id="cancelhotel10" class="hotel-btn">Cancel the hotel</button>
-    </div> <!-- /.hotel-item -->
+            </td>
+            <td width='85%'>
+              <img src="images/5star.png">
+              <h4><a href="#">LONDON 5 STAR HOTEL</a></h4>
+              <h3>LONDON,LONDON city</h3>
+              <h3>5 star(s)</h3>
+              <h4>HK$6000 per night</h4>
+            </td>
+            <td>
+              <p><img src="images/5starhotel.jpg"></p>
+            </td>
+          </tr>
+        </table>
+        <button  id="buyhotel4" class="hotel-btn">Book a hotel</button>
+        <button  id="cancelhotel4" class="hotel-btn">Cancel the hotel</button>
+      </div> <!-- /.hotel-item -->
 
+      <div class="hotel-item">
+        <table>
+          <tr>
+            <td>  <br><br><br><br>
 
-    <div class="hotel-item">
+            </td>
+            <td width='85%'>
+              <img src="images/4star.png">
+              <h4><a href="#">LONDON 4 STAR HOTEL</a></h4>
+              <h3>LONDON,LONDON BRIDGE</h3>
+              <h3>4 star(s)</h3>
+              <h4>HK$4500 per night</h4>
+            </td>
+            <td>
+              <p><img src="images/4starhotel.jpg"></p>
+            </td>
+          </tr>
+        </table>
+        <button  id="buyhotel5" class="hotel-btn">Book a hotel</button>
+        <button  id="cancelhotel5" class="hotel-btn">Cancel the hotel</button>
+      </div> <!-- /.hotel-item -->
 
-      <table>
-        <tr>
-          <td>  <br><br><br><br>
+      <div class="hotel-item">
 
-          </td>
-          <td width='85%'>
-            <img src="images/1star.png">
-            <h4><a href="#">JAPAN IVE HOTEL</a></h4>
-            <h3>JAPAN,British Museum</h3>
-            <h3> 1 star(s)</h3>
-            <h4> HK$400 per night</h4>
-          </td>
-          <td>
-            <p><img src="images/ivehotel.jpg"></p>
-          </td>
-        </tr>
-      </table>
-      <button  id="buyhotel11" class="hotel-btn">Book a hotel</button>
-      <button  id="cancelhotel11" class="hotel-btn">Cancel the hotel</button>
-    </div> <!-- /.hotel-item -->
+        <table>
+          <tr>
+            <td>  <br><br><br><br>
 
+            </td>
+            <td width='85%'>
+              <img src="images/3star.png">
+              <h4><a href="#">LONDON CHERRY HOTEL</a></h4>
+              <h3>LONDON,HARRODS</h3>
+              <h3>3 star(s)</h3>
+              <h4>HK$1300 per night</h4>
+            </td>
+            <td>
+              <p><img src="images/cherryhotel.jpg"></p>
+              </td7
+            </tr>
+          </table>
+          <button  id="buyhotel6" class="hotel-btn">Book a hotel</button>
+          <button  id="cancelhotel6" class="hotel-btn">Cancel the hotel</button>
+        </div> <!-- /.hotel-item -->
 
-    <div class="hotel-item">
-      <table>
-        <tr>
-          <td>  <br><br><br><br>
+        <div class="hotel-item">
 
-          </td>
-          <td width='85%'>
-            <img src="images/5star.png">
-            <h4><a href="#">JAPAN 5 STAR HOTEL</a></h4>
-            <h3> 5 star(s)</h3>
-            <h4> HK$6000 per night</h4>
-          </td>
-          <td>
-            <p><img src="images/5starhotel.jpg"></p>
-          </td>
-        </tr>
-      </table>
-      <button  id="buyhotel12" class="hotel-btn">Book a hotel</button>
-<button  id="cancelhotel12" class="hotel-btn">Cancel the hotel</button>
-    </div> <!-- /.hotel-item -->
+          <table>
+            <tr>
+              <td>  <br><br><br><br>
 
-    <div class="hotel-item">
-      <table>
-        <tr>
-          <td>  <br><br><br><br>
+              </td>
+              <td width='85%'>
+                <img src="images/2star.png">
+                <h4><a href="#">LONDON NORMAN HOTEL</a></h4>
+                <h3>LONDON,LONDON BRIDGE</h3>
+                <h3>2 star(s)</h3>
+                <h4>HK$600 per night</h4>
+              </td>
+              <td>
+                <p><img src="images/normanhotel.jpg"></p>
+              </td>
+            </tr>
+          </table>
+          <button  id="buyhotel7" class="hotel-btn">Book a hotel</button>
+          <button  id="cancelhotel7" class="hotel-btn">Cancel the hotel</button>
+        </div> <!-- /.hotel-item -->
 
-          </td>
-          <td width='85%'>
-            <img src="images/4star.png">
-            <h4><a href="#">JAPAN 4 STAR HOTEL</a></h4>
-            <h3> 4 star(s)</h3>
-            <h4>HK$4500 per night</h4>
-          </td>
-          <td>
-            <p><img src="images/4starhotel.jpg"></p>
-          </td>
-        </tr>
-      </table>
-      <button  id="buyhotel13" class="hotel-btn">Book a hotel</button>
-<button  id="cancelhotel13" class="hotel-btn">Cancel the hotel</button>
-    </div> <!-- /.hotel-item -->
+        <div class="hotel-item">
+          <table>
+            <tr>
+              <td>  <br><br><br><br>
 
-    <div class="hotel-item">
-
-      <table>
-        <tr>
-          <td>  <br><br><br><br>
-
-          </td>
-          <td width='85%'>
-            <img src="images/3star.png">
-            <h4><a href="#">JAPAN CHERRY HOTEL</a></h4>
-            <h3> 3 star(s)</h3>
-            <h4>HK$1300 per night</h4>
-          </td>
-          <td>
-            <p><img src="images/cherryhotel.jpg"></p>
-          </td>
-        </tr>
-      </table>
-      <button  id="buyhotel14" class="hotel-btn">Book a hotel</button>
-<button  id="cancelhotel14" class="hotel-btn">Cancel the hotel</button>
-    </div> <!-- /.hotel-item -->
-
-    <div class="hotel-item">
-
-      <table>
-        <tr>
-          <td>  <br><br><br><br>
-
-          </td>
-          <td width='85%'>
-            <img src="images/2star.png">
-            <h4><a href="#">JAPAN NORMAN HOTEL</a></h4>
-            <h3> 2 star(s)</h3>
-            <h4>HK$600 per night</h4>
-          </td>
-          <td>
-            <p><img src="images/normanhotel.jpg"></p>
-          </td>
-        </tr>
-      </table>
-      <button  id="buyhotel15" class="hotel-btn">Book a hotel</button>
-<button  id="cancelhotel15" class="hotel-btn">Cancel the hotel</button>
-    </div> <!-- /.hotel-item -->
-
-    <div class="hotel-item">
-      <table>
-        <tr>
-          <td>  <br><br><br><br>
-
-          </td>
-          <td width='85%'>
-            <img src="images/1star.png">
-            <h4><a href="#">JAPAN MOONCAKE HOTEL</a></h4>
-            <h3> 1 star(s)</h3>
-            <h4>HK$100 per night</h4>
-          </td>
-          <td>
-            <p><img src="images/mooncakehotel.jpg"></p>
-          </td>
-        </tr>
-      </table>
-      <button  id="buyhotel16" class="hotel-btn">Book a hotel</button>
-<button  id="cancelhotel16" class="hotel-btn">Cancel the hotel</button>
-    </div> <!-- /.hotel-item -->
-
-
-  </div> <!-- /.container -->
-</div> <!-- /.hotel-list -->
+              </td>
+              <td width='85%'>
+                <img src="images/1star.png">
+                <h4><a href="#">LONDON MOONCAKE HOTEL</a></h4>
+                <h3>LONDON,ANGEL CENTRAL</h3>
+                <h3>1 star(s)</h3>
+                <h4>HK$100 per night</h4>
+              </td>
+              <td>
+                <p><img src="images/mooncakehotel.jpg"></p>
+              </td>
+            </tr>
+          </table>
+          <button  id="buyhotel8" class="hotel-btn">Book a hotel</button>
+          <button  id="cancelhotel8" class="hotel-btn">Cancel the hotel</button>
+        </div> <!-- /.hotel-item -->
 
 
 
+        <!-- japan hotel-->
 
-<div class="partner-list">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2 col-sm-4 col-xs-6">
-        <div class="partner-item">
-          <img src="images/partners/partner1.png" alt="">
-        </div> <!-- /.partner-item -->
-      </div> <!-- /.col-md-2 -->
-      <div class="col-md-2 col-sm-4 col-xs-6">
-        <div class="partner-item">
-          <img src="images/partners/partner2.png" alt="">
-        </div> <!-- /.partner-item -->
-      </div> <!-- /.col-md-2 -->
-      <div class="col-md-2 col-sm-4 col-xs-6">
-        <div class="partner-item">
-          <img src="images/partners/partner3.png" alt="">
-        </div> <!-- /.partner-item -->
-      </div> <!-- /.col-md-2 -->
-      <div class="col-md-2 col-sm-4 col-xs-6">
-        <div class="partner-item">
-          <img src="images/partners/partner1.png" alt="">
-        </div> <!-- /.partner-item -->
-      </div> <!-- /.col-md-2 -->
-      <div class="col-md-2 col-sm-4 col-xs-6">
-        <div class="partner-item">
-          <img src="images/partners/partner2.png" alt="">
-        </div> <!-- /.partner-item -->
-      </div> <!-- /.col-md-2 -->
-      <div class="col-md-2 col-sm-4 col-xs-6">
-        <div class="partner-item last">
-          <img src="images/partners/partner3.png" alt="">
-        </div> <!-- /.partner-item -->
-      </div> <!-- /.col-md-2 -->
-    </div> <!-- /.row -->
-  </div> <!-- /.container -->
-</div> <!-- /.partner-list -->
+        <div class="hotel-item">
+          <table>
+            <tr>
+              <td>  <br><br><br><br>
+
+              </td>
+              <td width='85%'>
+                <img src="images/5star.png">
+                <h4><a href="#">JAPAN HAPPY HOTEL</a></h4>
+                <h3>JAPAN,Hippodrome Casino</h3>
+                <h3>5 star(s)</h3>
+                <h4>HK$8888 per night</h4>
+              </td>
+              <td>
+                <p><img src="images/happyhotel.jpg"></p>
+              </td>
+            </tr>
+          </table>
+          <button  id="buyhotel9" class="hotel-btn">Book a hotel</button>
+          <button  id="cancelhotel9" class="hotel-btn">Cancel the hotel</button>
+        </div> <!-- /.hotel-item -->
 
 
+        <div class="hotel-item">
+          <table>
+            <tr>
+              <td>  <br><br><br><br>
 
-<div class="site-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-sm-4">
-        <div class="footer-logo">
-          <a href="index.html">
-            <img src="images/logo.png" alt="">
-          </a>
-        </div>
-      </div> <!-- /.col-md-4 -->
-      <div class="col-md-4 col-sm-4">
-        <div class="copyright">
-          <span>Copyright &copy; 2017 <a href="#">HAPPY TRAVEL LTD.</a></span>
-        </div>
-      </div> <!-- /.col-md-4 -->
-      <div class="col-md-4 col-sm-4">
-        <ul class="social-icons">
-          <li><a href="#" class="fa fa-facebook"></a></li>
-          <li><a href="#" class="fa fa-twitter"></a></li>
-          <li><a href="#" class="fa fa-linkedin"></a></li>
-          <li><a href="#" class="fa fa-flickr"></a></li>
-          <li><a href="#" class="fa fa-rss"></a></li>
-        </ul>
-      </div> <!-- /.col-md-4 -->
-    </div> <!-- /.row -->
-  </div> <!-- /.container -->
-</div> <!-- /.site-footer -->
+              </td>
+              <td width='85%'>
+                <img src="images/4star.png">
+                <h4><a href="#">JAPAN TRAVEL HOTEL</a></h4>
+                <h3>JAPAN,British Museum</h3>
+                <h3>4 star(s)</h3>
+                <h4>HK$2200 per night</h4>
+              </td>
+              <td>
+                <p><img src="images/travelhotel.jpg"></p>
+              </td>
+            </tr>
+          </table>
+          <button  id="buyhotel10" class="hotel-btn">Book a hotel</button>
+          <button  id="cancelhotel10" class="hotel-btn">Cancel the hotel</button>
+        </div> <!-- /.hotel-item -->
 
-<script src="js/vendor/jquery-1.11.0.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-<script src="js/bootstrap.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
 
-<!-- Google Map -->
-<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-<script src="js/vendor/jquery.gmap3.min.js"></script>
+        <div class="hotel-item">
 
-<!-- Google Map Init-->
-<script type="text/javascript">
-jQuery(function($){
-  $('.first-map').gmap3({
-    marker:{
-      address: '16.8496189,96.1288854'
-    },
-    map:{
-      options:{
-        zoom: 16,
-        scrollwheel: false,
-        streetViewControl : true
-      }
-    }
-  });
-});
-</script>
-</div>
-<!-- templatemo 409 travel -->
+          <table>
+            <tr>
+              <td>  <br><br><br><br>
+
+              </td>
+              <td width='85%'>
+                <img src="images/1star.png">
+                <h4><a href="#">JAPAN IVE HOTEL</a></h4>
+                <h3>JAPAN,British Museum</h3>
+                <h3> 1 star(s)</h3>
+                <h4> HK$400 per night</h4>
+              </td>
+              <td>
+                <p><img src="images/ivehotel.jpg"></p>
+              </td>
+            </tr>
+          </table>
+          <button  id="buyhotel11" class="hotel-btn">Book a hotel</button>
+          <button  id="cancelhotel11" class="hotel-btn">Cancel the hotel</button>
+        </div> <!-- /.hotel-item -->
+
+
+        <div class="hotel-item">
+          <table>
+            <tr>
+              <td>  <br><br><br><br>
+
+              </td>
+              <td width='85%'>
+                <img src="images/5star.png">
+                <h4><a href="#">JAPAN 5 STAR HOTEL</a></h4>
+                <h3> 5 star(s)</h3>
+                <h4> HK$6000 per night</h4>
+              </td>
+              <td>
+                <p><img src="images/5starhotel.jpg"></p>
+              </td>
+            </tr>
+          </table>
+          <button  id="buyhotel12" class="hotel-btn">Book a hotel</button>
+          <button  id="cancelhotel12" class="hotel-btn">Cancel the hotel</button>
+        </div> <!-- /.hotel-item -->
+
+        <div class="hotel-item">
+          <table>
+            <tr>
+              <td>  <br><br><br><br>
+
+              </td>
+              <td width='85%'>
+                <img src="images/4star.png">
+                <h4><a href="#">JAPAN 4 STAR HOTEL</a></h4>
+                <h3> 4 star(s)</h3>
+                <h4>HK$4500 per night</h4>
+              </td>
+              <td>
+                <p><img src="images/4starhotel.jpg"></p>
+              </td>
+            </tr>
+          </table>
+          <button  id="buyhotel13" class="hotel-btn">Book a hotel</button>
+          <button  id="cancelhotel13" class="hotel-btn">Cancel the hotel</button>
+        </div> <!-- /.hotel-item -->
+
+        <div class="hotel-item">
+
+          <table>
+            <tr>
+              <td>  <br><br><br><br>
+
+              </td>
+              <td width='85%'>
+                <img src="images/3star.png">
+                <h4><a href="#">JAPAN CHERRY HOTEL</a></h4>
+                <h3> 3 star(s)</h3>
+                <h4>HK$1300 per night</h4>
+              </td>
+              <td>
+                <p><img src="images/cherryhotel.jpg"></p>
+              </td>
+            </tr>
+          </table>
+          <button  id="buyhotel14" class="hotel-btn">Book a hotel</button>
+          <button  id="cancelhotel14" class="hotel-btn">Cancel the hotel</button>
+        </div> <!-- /.hotel-item -->
+
+        <div class="hotel-item">
+
+          <table>
+            <tr>
+              <td>  <br><br><br><br>
+
+              </td>
+              <td width='85%'>
+                <img src="images/2star.png">
+                <h4><a href="#">JAPAN NORMAN HOTEL</a></h4>
+                <h3> 2 star(s)</h3>
+                <h4>HK$600 per night</h4>
+              </td>
+              <td>
+                <p><img src="images/normanhotel.jpg"></p>
+              </td>
+            </tr>
+          </table>
+          <button  id="buyhotel15" class="hotel-btn">Book a hotel</button>
+          <button  id="cancelhotel15" class="hotel-btn">Cancel the hotel</button>
+        </div> <!-- /.hotel-item -->
+
+        <div class="hotel-item">
+          <table>
+            <tr>
+              <td>  <br><br><br><br>
+
+              </td>
+              <td width='85%'>
+                <img src="images/1star.png">
+                <h4><a href="#">JAPAN MOONCAKE HOTEL</a></h4>
+                <h3> 1 star(s)</h3>
+                <h4>HK$100 per night</h4>
+              </td>
+              <td>
+                <p><img src="images/mooncakehotel.jpg"></p>
+              </td>
+            </tr>
+          </table>
+          <button  id="buyhotel16" class="hotel-btn">Book a hotel</button>
+          <button  id="cancelhotel16" class="hotel-btn">Cancel the hotel</button>
+        </div> <!-- /.hotel-item -->
+
+
+      </div> <!-- /.container -->
+    </div> <!-- /.hotel-list -->
+
+
+
+
+    <div class="partner-list">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="partner-item">
+              <img src="images/partners/partner1.png" alt="">
+            </div> <!-- /.partner-item -->
+          </div> <!-- /.col-md-2 -->
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="partner-item">
+              <img src="images/partners/partner2.png" alt="">
+            </div> <!-- /.partner-item -->
+          </div> <!-- /.col-md-2 -->
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="partner-item">
+              <img src="images/partners/partner3.png" alt="">
+            </div> <!-- /.partner-item -->
+          </div> <!-- /.col-md-2 -->
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="partner-item">
+              <img src="images/partners/partner1.png" alt="">
+            </div> <!-- /.partner-item -->
+          </div> <!-- /.col-md-2 -->
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="partner-item">
+              <img src="images/partners/partner2.png" alt="">
+            </div> <!-- /.partner-item -->
+          </div> <!-- /.col-md-2 -->
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="partner-item last">
+              <img src="images/partners/partner3.png" alt="">
+            </div> <!-- /.partner-item -->
+          </div> <!-- /.col-md-2 -->
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </div> <!-- /.partner-list -->
+
+
+
+    <div class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4">
+            <div class="footer-logo">
+              <a href="index.html">
+                <img src="images/logo.png" alt="">
+              </a>
+            </div>
+          </div> <!-- /.col-md-4 -->
+          <div class="col-md-4 col-sm-4">
+            <div class="copyright">
+              <span>Copyright &copy; 2017 <a href="#">HAPPY TRAVEL LTD.</a></span>
+            </div>
+          </div> <!-- /.col-md-4 -->
+          <div class="col-md-4 col-sm-4">
+            <ul class="social-icons">
+              <li><a href="#" class="fa fa-facebook"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="#" class="fa fa-linkedin"></a></li>
+              <li><a href="#" class="fa fa-flickr"></a></li>
+              <li><a href="#" class="fa fa-rss"></a></li>
+            </ul>
+          </div> <!-- /.col-md-4 -->
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </div> <!-- /.site-footer -->
+
+    <script src="js/vendor/jquery-1.11.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google Map -->
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="js/vendor/jquery.gmap3.min.js"></script>
+
+    <!-- Google Map Init-->
+    <script type="text/javascript">
+    jQuery(function($){
+      $('.first-map').gmap3({
+        marker:{
+          address: '16.8496189,96.1288854'
+        },
+        map:{
+          options:{
+            zoom: 16,
+            scrollwheel: false,
+            streetViewControl : true
+          }
+        }
+      });
+    });
+    </script>
+  </div>
+  <!-- templatemo 409 travel -->
 </body>
 </html>

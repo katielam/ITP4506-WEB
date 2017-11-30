@@ -27,6 +27,10 @@
 
 
             $(document).ready(function(){
+              if(getCookie("total")=="NaN" || getCookie("total")==""){
+                setCookie("total",0,30);
+              }
+
               $("#loading").hide();
               for(var i=1;i<9;i++){
                 if(getCookie("ticket"+i)!=""){
@@ -36,87 +40,121 @@
                   $("#buyticket"+i).show();
                   $("#cancelticket"+i).hide();
                 }
-
-
               }
+
+
+
+              var total=0;
+              var ticketcost = [7197,827,2499,4532,6648,7155,2079,2079];
               $("#buyticket1").click(function(){
                 setCookie("ticket1","HAPPY AIRLINE Ticket",30);
+                setCookie("total",parseInt(getCookie("total"))+ticketcost[0],30);
+
                 $(this).hide();
                 $("#cancelticket1").show();
               });
               $("#buyticket2").click(function(){
                 setCookie("ticket2","TRAVEL AIRLINE Ticket",30);
+                setCookie("total",parseInt(getCookie("total"))+ticketcost[1],30);
                 $(this).hide();
                 $("#cancelticket2").show();
               });
               $("#buyticket3").click(function(){
                 setCookie("ticket3","IVE AIRLINE Ticket",30);
+                setCookie("total",parseInt(getCookie("total"))+ticketcost[2],30);
+
                   $(this).hide();
                 $("#cancelticket3").show();
               });
               $("#buyticket4").click(function(){
                 setCookie("ticket4","5 STAR AIRLINE Ticket",30);
+                setCookie("total",parseInt(getCookie("total"))+ticketcost[3],30);
+
                 $(this).hide();
                 $("#cancelticket4").show();
               });
               $("#buyticket5").click(function(){
                 setCookie("ticket5","CHERRY AIRLINE Ticket",30);
+                setCookie("total",parseInt(getCookie("total"))+ticketcost[4],30);
+
                 $(this).hide();
                 $("#cancelticket5").show();
               });
               $("#buyticket6").click(function(){
                 setCookie("ticket6","TASMAN AIRLINE Ticket",30);
+                setCookie("total",parseInt(getCookie("total"))+ticketcost[5],30);
+
                 $(this).hide();
                 $("#cancelticket6").show();
               });
               $("#buyticket7").click(function(){
                 setCookie("ticket7","NORMAN AIRLINE Ticket",30);
+                setCookie("total",parseInt(getCookie("total"))+ticketcost[6],30);
+
                 $(this).hide();
                 $("#cancelticket7").show();
               });
               $("#buyticket8").click(function(){
                 setCookie("ticket8","MOONCAKE AIRLINE Ticket",30);
+                setCookie("total",parseInt(getCookie("total"))+ticketcost[7],30);
+
                 $(this).hide();
                 $("#cancelticket8").show();
               });
               <!-- ---------------------------------- -->
               $("#cancelticket1").click(function(){
                 setCookie("ticket1","",30);
+                setCookie("total",parseInt(getCookie("total"))-ticketcost[0],30);
+
                 $(this).hide();
                 $("#buyticket1").show();
               });
               $("#cancelticket2").click(function(){
                 setCookie("ticket2","",30);
+                setCookie("total",parseInt(getCookie("total"))-ticketcost[1],30);
+
                 $(this).hide();
                 $("#buyticket2").show();
               });
               $("#cancelticket3").click(function(){
                 setCookie("ticket3","",30);
+                setCookie("total",parseInt(getCookie("total"))-ticketcost[2],30);
+
                 $(this).hide();
                 $("#buyticket3").show();
               });
               $("#cancelticket4").click(function(){
                 setCookie("ticket4","",30);
+                setCookie("total",parseInt(getCookie("total"))-ticketcost[3],30);
+
                 $(this).hide();
                 $("#buyticket4").show();
               });
               $("#cancelticket5").click(function(){
                 setCookie("ticket5","",30);
+                setCookie("total",parseInt(getCookie("total"))-ticketcost[4],30);
+
                 $(this).hide();
                 $("#buyticket5").show();
               });
               $("#cancelticket6").click(function(){
                 setCookie("ticket6","",30);
+                setCookie("total",parseInt(getCookie("total"))-ticketcost[5],30);
+
                 $(this).hide();
                 $("#buyticket6").show();
               });
               $("#cancelticket7").click(function(){
                 setCookie("ticket7","",30);
+                setCookie("total",parseInt(getCookie("total"))-ticketcost[6],30);
+
                 $(this).hide();
                 $("#buyticket7").show();
               });
               $("#cancelticket8").click(function(){
                 setCookie("ticket8","",30);
+                setCookie("total",parseInt(getCookie("total"))-ticketcost[7],30);
+
                 $(this).hide();
                 $("#buyticket8").show();
               });

@@ -27,6 +27,8 @@
     $("#loading").hide();
 
 
+
+
   if (getCookie("username") != ""){
     $("#changeToLogout").text("LOGOUT");
 
@@ -41,6 +43,7 @@
       setCookie("username","",30);
     });
   }
+  $("#printtotal").html("<font size='5'>You have to pay : HK$"+(parseInt(getCookie("total"))+parseInt(getCookie("toMinus")))+"</font>");
   });
   function checkPayment(){
 
@@ -81,6 +84,13 @@
       }
     }
 
+    function minus(){
+
+
+      setCookie("toMinus",0,30);
+
+
+    }
 
     function clickabutton(){
       modal.style.display = "none";
@@ -124,6 +134,7 @@
         }
     }
 
+
     </script>
   </head>
   <body>
@@ -143,12 +154,12 @@
             <div class="col-md-8 col-sm-6 col-xs-2">
               <div class="main-menu">
                 <ul class="visible-lg visible-md">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="Hotel.html">Hotel</a></li>
-                  <li><a href="Flight.html">Flight</a></li>
-                  <li><a id="changeToLogout" href="Register.html">Register/Login</a></li>
-                  <li><a href="shoppingcart.html"><div class="cart"><img src="images/shoppingcart.png"></div></a></li>
-                  <li id="profile"><a href="Profile.html">Profile</a></li>
+                  <li><a onclick="minus()" href="index.html">Home</a></li>
+                  <li><a onclick="minus()" href="Hotel.html">Hotel</a></li>
+                  <li><a onclick="minus()" href="Flight.html">Flight</a></li>
+                  <li><a onclick="minus()" id="changeToLogout" href="Register.html">Register/Login</a></li>
+                  <li><a onclick="minus()" href="shoppingcart.html"><div class="cart"><img src="images/shoppingcart.png"></div></a></li>
+                  <li id="profile"><a onclick="minus()" href="Profile.html">Profile</a></li>
                 </ul>
                 <a href="#" class="toggle-menu visible-sm visible-xs">
                   <i class="fa fa-bars"></i>
@@ -181,7 +192,7 @@
         <div class="row">
           <div class="col-md-8 ">
             <h3 class="widget-title">Pay Now</h3>
-
+            <p id="printtotal">alkfnk</p>
             <div id="checkifLogged" class="formbtn">
               <b>Login to get a discount!</b><button onclick="window.location.href='Register.html'" >Login</button>
 
