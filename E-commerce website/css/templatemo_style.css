@@ -1411,3 +1411,10 @@ div.contact-form input.mainBtn {
 .Rform p{
   font-size: 20px;
 }
+
+.bookNow h5{
+  color: #9ed034;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 15px 0 5px 0;
+}

@@ -26,6 +26,30 @@
 <script src="jquery-1.11.1.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+  $("#bookNow1700").click(function(){
+    setCookie("bookNow1","<div style='color: #9ed034'>Rome, Milan, Naples</div><div style='color: #e54747'>SILVER HOTEL, 4 NIGHTS, 5 STARS</div>HK$1700<br>",30);
+    location.href = "shoppingcart.html";
+  });
+  $("#bookNow2200").click(function(){
+    setCookie("bookNow2","<div style='color: #9ed034'>Paris, Marseille, Lyon</div><div style='color: #e54747'>NEW PALACE, 5 NIGHTS, 5 STARS</div>HK$2200<br>",30);
+    location.href = "shoppingcart.html";
+  });
+  $("#bookNow3300").click(function(){
+    setCookie("bookNow3","<div style='color: #9ed034'>Berlin, Hamburg, Munich</div><div style='color: #e54747'>LUXE HOTEL, 5 NIGHTS, 6 STARS</div>HK$3300<br>",30);
+    location.href = "shoppingcart.html";
+  });
+  $("#bookNow4400").click(function(){
+    setCookie("bookNow4","<div style='color: #9ed034'>Madrid, Bercelona, Valencia</div><div style='color: #e54747'>GOOD HOTEL, 4 NIGHTS, 6 STARS</div>HK$4400<br>",30);
+    location.href = "shoppingcart.html";
+  });
+  $("#bookNow5500").click(function(){
+    setCookie("bookNow5","<div style='color: #9ed034'>Amsterdam, Delft, The Hague</div><div style='color: #e54747'>BEST HOTEL, 6 NIGHTS, 7 STARS</div>HK$5500<br>",30);
+    location.href = "shoppingcart.html";
+  });
+  $("#bookNow6600").click(function(){
+    setCookie("bookNow6","<div style='color: #9ed034'>Zürich, Geneva, Basel</div><div style='color: #e54747'>NEW HOTEL, 7 NIGHTS, 7 STARS</div>HK$6600<br>",30);
+    location.href = "shoppingcart.html";
+  });
   if (getCookie("username")!=""){
     $("#changeToLogout").text("LOGOUT");
 
@@ -232,7 +256,7 @@ function checkCookie() {
         <div class="list-content">
           <h5>Rome, Milan, Naples</h5>
           <span>SILVER HOTEL, 4 NIGHTS, 5 STARS</span>
-          <a href="#" class="price-btn">$1,700 Book Now</a>
+          <a href="#" id="bookNow1700" class="price-btn">$1,700 Book Now</a>
         </div> <!-- /.list-content -->
       </div> <!-- /.list-item -->
       <div class="list-item">
@@ -245,7 +269,7 @@ function checkCookie() {
         <div class="list-content">
           <h5>Paris, Marseille, Lyon</h5>
           <span>NEW PALACE, 5 NIGHTS, 5 STARS</span>
-          <a href="#" class="price-btn">$2,200 Book Now</a>
+          <a href="#" id="bookNow2200"class="price-btn">$2,200 Book Now</a>
         </div> <!-- /.list-content -->
       </div> <!-- /.list-item -->
       <div class="list-item">
@@ -258,7 +282,7 @@ function checkCookie() {
         <div class="list-content">
           <h5>Berlin, Hamburg, Munich</h5>
           <span>LUXE HOTEL, 5 NIGHTS, 6 STARS</span>
-          <a href="#" class="price-btn">$3,300 Book Now</a>
+          <a href="#" id="bookNow3300" class="price-btn">$3,300 Book Now</a>
         </div> <!-- /.list-content -->
       </div> <!-- /.list-item -->
       <div class="list-item">
@@ -271,7 +295,7 @@ function checkCookie() {
         <div class="list-content">
           <h5>Madrid, Bercelona, Valencia</h5>
           <span>GOOD HOTEL, 4 NIGHTS, 6 STARS</span>
-          <a href="#" class="price-btn">$4,400 Book Now</a>
+          <a href="#" id="bookNow4400" class="price-btn">$4,400 Book Now</a>
         </div> <!-- /.list-content -->
       </div> <!-- /.list-item -->
       <div class="list-item">
@@ -284,7 +308,7 @@ function checkCookie() {
         <div class="list-content">
           <h5>Amsterdam, Delft, The Hague</h5>
           <span>BEST HOTEL, 6 NIGHTS, 7 STARS</span>
-          <a href="#" class="price-btn">$5,500 Book Now</a>
+          <a href="#" id="bookNow5500" class="price-btn">$5,500 Book Now</a>
         </div> <!-- /.list-content -->
       </div> <!-- /.list-item -->
       <div class="list-item">
@@ -297,7 +321,7 @@ function checkCookie() {
         <div class="list-content">
           <h5>Zürich, Geneva, Basel</h5>
           <span>NEW HOTEL, 7 NIGHTS, 7 STARS</span>
-          <a href="#" class="price-btn">$6,600 Book Now</a>
+          <a href="#" id="bookNow6600" class="price-btn">$6,600 Book Now</a>
         </div> <!-- /.list-content -->
       </div> <!-- /.list-item -->
     </div> <!-- /.our-listing -->
