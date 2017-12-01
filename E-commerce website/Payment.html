@@ -24,6 +24,8 @@
   <script src="jquery-1.11.1.js" type="text/javascript"></script>
   <script type="text/javascript">
   $(document).ready(function(){
+
+
     $("#loading").hide();
     var result = (parseInt(getCookie("total"))+parseInt(getCookie("toMinus")));
 
@@ -47,7 +49,20 @@
     });
   }
   $("#printtotal").html("<font size='5'>You have to pay : HK$"+result+"</font>");
+
+
+  $("#add").click(function(){
+
+    document.getElementById("Fname").value = getCookie("Fname");
+    document.getElementById("Lname").value = getCookie("Lname");
+    document.getElementById("email").value = getCookie("email"));
+
+
   });
+
+  });
+
+
   function checkPayment(){
 
 
@@ -195,14 +210,15 @@
         <div class="row">
           <div class="col-md-8 ">
             <h3 class="widget-title">Pay Now</h3>
-            <p id="printtotal">alkfnk</p>
+            <p id="printtotal"></p>
             <div id="checkifLogged" class="formbtn">
               <b>Login to get a discount!</b><button onclick="window.location.href='Register.html'" >Login</button>
 
             </div>
             <div id="checkTicket"></div>
+
             <br>
-            <button id="add">Add your personal information</button>
+            <input type="submit" id="add" value="Add your personal information">
             <div class="payment">
               <form>
                 <table width="100%">
